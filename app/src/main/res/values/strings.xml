@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Sri Lanka Railway Digital</string>
     <string name="title">Sri Lanka Railway</string>
+    <string name="home">HOME</string>
+    <string name="schedule">TIME SCHEDULE</string>
+
+    <string-array name="stations">
+        <item>Colombo Fort</item>
+        <item>Maradana</item>
+        <item>Ragama</item>
+    </string-array>
 </resources>
