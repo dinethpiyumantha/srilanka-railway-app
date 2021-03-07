@@ -100,8 +100,8 @@
         android:layout_width="315dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:paddingLeft="12dp"
         android:fontFamily="@font/semibold"
+        android:paddingLeft="12dp"
         android:text="FROM"
         android:textColor="@color/gray_light"
         android:textSize="14dp"
@@ -123,16 +123,13 @@
         app:layout_constraintTop_toBottomOf="@+id/txtfrom" />
 
 
-    <!--    ==============================================-->
-
-
     <TextView
         android:id="@+id/txtto"
         android:layout_width="315dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:paddingLeft="12dp"
         android:fontFamily="@font/semibold"
+        android:paddingLeft="12dp"
         android:text="TO"
         android:textColor="@color/gray_light"
         android:textSize="14dp"
@@ -152,6 +149,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtto" />
+
+    <TextView
+        android:id="@+id/txtdate"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/semibold"
+        android:paddingLeft="12dp"
+        android:text="DATE"
+        android:textColor="@color/gray_light"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spnstto" />
 
     <LinearLayout
         android:layout_width="315dp"
@@ -183,15 +194,14 @@
             android:layout_height="wrap_content"
             android:background="@drawable/secondary_button"
             android:fontFamily="@font/regular"
-            android:foreground="@drawable/secondary_button"
             android:gravity="center"
             android:text="CLEAR"
             android:textColor="@color/yellow"
             android:textSize="20dp"
-            app:backgroundTint="#FFFFFF"
-            app:iconTint="#FFFFFF"
+            app:backgroundTint="@null"
             app:layout_constraintBottom_toTopOf="@+id/vmenu"
             app:layout_constraintEnd_toEndOf="parent" />
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
