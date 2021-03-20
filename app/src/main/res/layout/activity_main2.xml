@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    tools:context=".Main">
+
+     <View
+        android:id="@+id/vhome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/vmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:background="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/vhomecont"
+        android:layout_width="wrap_content"
+        android:layout_height="660dp"
+        app:layout_constraintBottom_toTopOf="@+id/vmenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vhome"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/htitle"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/semibold"
+        android:text="@string/home"
+        android:textColor="@color/gray_light"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/hname"
+        android:layout_width="315dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/header_bg"
+        android:fontFamily="@font/bold"
+        android:gravity="end"
+        android:paddingTop="10dp"
+        android:text="@string/title"
+        android:drawableLeft="@drawable/logo_80"
+        android:textAlignment="textEnd"
+        android:textColor="@color/dark"
+        android:textSize="18dp"
+        app:backgroundTint="#FFFFFF"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/htitle" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="315dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/notice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hname" />
+
+    <TextView
+        android:id="@+id/hschedule"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/semibold"
+        android:text="@string/schedule"
+        android:textColor="@color/gray_light"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <TextView
+        android:id="@+id/txtfrom"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/semibold"
+        android:paddingLeft="12dp"
+        android:text="FROM"
+        android:textColor="@color/gray_light"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="@+id/vhomecont"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hschedule" />
+
+    <Spinner
+        android:id="@+id/spnmonth"
+        android:layout_width="315dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/secondary_spinner"
+        android:entries="@array/stations"
+        android:padding="5dp"
+        app:icon="@drawable/ic_down"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtfrom" />
+
+
+    <TextView
+        android:id="@+id/txtto"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/semibold"
+        android:paddingLeft="12dp"
+        android:text="TO"
+        android:textColor="@color/gray_light"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="@+id/vhomecont"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spnmonth" />
+
+    <Spinner
+        android:id="@+id/spnstto"
+        android:layout_width="315dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/secondary_spinner"
+        android:entries="@array/stations"
+        android:padding="5dp"
+        app:icon="@drawable/ic_down"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtto" />
+
+    <TextView
+        android:id="@+id/txtdate"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/semibold"
+        android:paddingLeft="12dp"
+        android:text="DATE"
+        android:textColor="@color/gray_light"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spnstto" />
+
+    <LinearLayout
+        android:layout_width="315dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/vmenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btnfind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/primary_button"
+            android:fontFamily="@font/regular"
+            android:text="FIND"
+            android:textColor="@color/dark"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/vmenu"
+            app:layout_constraintEnd_toStartOf="@+id/btnclear"
+            app:layout_constraintHorizontal_bias="0.347"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnclear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/secondary_button"
+            android:fontFamily="@font/regular"
+            android:gravity="center"
+            android:text="CLEAR"
+            android:textColor="@color/yellow"
+            android:textSize="20dp"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toTopOf="@+id/vmenu"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

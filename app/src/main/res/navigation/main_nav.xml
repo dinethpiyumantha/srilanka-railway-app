@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/home2">
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.bugapocalypse.srilankarailwaydigital.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/timeManagement"
+        android:name="com.bugapocalypse.srilankarailwaydigital.TimeManagement"
+        android:label="fragment_time_management"
+        tools:layout="@layout/fragment_time_management" />
+    <fragment
+        android:id="@+id/ticketManagement"
+        android:name="com.bugapocalypse.srilankarailwaydigital.TicketManagement"
+        android:label="fragment_ticket_management"
+        tools:layout="@layout/fragment_ticket_management" />
+    <fragment
+        android:id="@+id/ticketCheckingSystem"
+        android:name="com.bugapocalypse.srilankarailwaydigital.TicketCheckingSystem"
+        android:label="fragment_ticket_checking_system"
+        tools:layout="@layout/fragment_ticket_checking_system" />
+    <fragment
+        android:id="@+id/userManagement"
+        android:name="com.bugapocalypse.srilankarailwaydigital.UserManagement"
+        android:label="fragment_user_management"
+        tools:layout="@layout/fragment_user_management" />
+</navigation>

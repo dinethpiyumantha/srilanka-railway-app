@@ -11,4 +11,8 @@
         <item>Maradana</item>
         <item>Ragama</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lbl_my_reminders">MY REMINDERS</string>
+    <string name="lbl_reminder">Reminder</string>
 </resources>

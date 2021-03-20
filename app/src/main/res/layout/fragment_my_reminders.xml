@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    tools:context=".MyReminders">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:id="@+id/htitle"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/semibold"
+            android:text="@string/lbl_my_reminders"
+            android:textColor="@color/gray_light"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/semibold"
+                android:text="21-03-2021"
+                android:textColor="@color/gray_light"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/yellow"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/txtfrom"
+                    android:layout_width="315dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/semibold"
+                    android:paddingLeft="12dp"
+                    android:text="10 : 00 AM"
+                    android:textColor="@color/dark"
+                    android:textSize="14dp"/>
+
+                <TextView
+                    android:layout_width="315dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/regular"
+                    android:paddingLeft="12dp"
+                    android:text="Udarata Manike"
+                    android:textColor="@color/dark"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="315dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/regular"
+                    android:paddingLeft="12dp"
+                    android:text="Kandy to Ragama"
+                        android:textColor="@color/dark"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

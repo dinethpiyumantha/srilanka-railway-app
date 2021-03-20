@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    tools:context=".DigitalTicketDets">
+
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:layout_gravity="center">
+
+       <LinearLayout
+           android:id="@+id/linearLayout"
+           android:layout_width="315dp"
+           android:layout_height="42dp"
+           android:background="@color/yellow"
+           android:orientation="horizontal"
+           android:paddingLeft="10dp"
+           android:paddingTop="5dp"
+           android:paddingRight="10dp">
+
+           <TextView
+               android:id="@+id/txtclass"
+               android:layout_width="143dp"
+               android:layout_height="wrap_content"
+               android:fontFamily="@font/bold"
+               android:text="2nd Class"
+               android:textColor="@color/dark"
+               android:textSize="20dp" />
+
+           <TextView
+               android:id="@+id/txttype"
+               android:layout_width="154dp"
+               android:layout_height="wrap_content"
+               android:fontFamily="@font/light"
+               android:gravity="end"
+               android:text="EXPRESS"
+               android:textColor="@color/dark"
+               android:textSize="20dp" />
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:padding="20dp"
+           android:gravity="center_horizontal"
+           android:background="@drawable/ic_ticket">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:fontFamily="@font/bold"
+               android:text="DIGITAL RAILWAY TICKET"
+               android:textColor="@color/dark"
+               android:textSize="12dp" />
+
+           <ImageView
+               android:layout_width="200dp"
+               android:layout_height="200dp"
+               android:layout_marginTop="5dp"
+               android:padding="5dp" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="5dp"
+               android:fontFamily="@font/bold"
+               android:text="Destination"
+               android:textColor="@color/dark"
+               android:textSize="12dp" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:fontFamily="@font/regular"
+               android:text="Colombo Fort - Kurunegala"
+               android:textColor="@color/dark"
+               android:textSize="12dp" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="5dp"
+               android:fontFamily="@font/bold"
+               android:text="Train"
+               android:textColor="@color/dark"
+               android:textSize="12dp" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:fontFamily="@font/regular"
+               android:text="Colombo Commuter (Office Train)"
+               android:textColor="@color/dark"
+               android:textSize="12dp" />
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="5dp"
+               android:orientation="horizontal"
+               android:paddingHorizontal="20dp">
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:gravity="start"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="5dp"
+                       android:fontFamily="@font/bold"
+                       android:text="Price"
+                       android:textColor="@color/dark"
+                       android:textSize="12dp" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/regular"
+                       android:text="LKR. 350.00"
+                       android:textColor="@color/dark"
+                       android:textSize="12dp" />
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="20dp"
+                   android:layout_marginLeft="20dp"
+                   android:gravity="end"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="5dp"
+                       android:fontFamily="@font/bold"
+                       android:text="Valid True"
+                       android:textColor="@color/dark"
+                       android:textSize="12dp" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/regular"
+                       android:text="20-03-2021  12.00AM"
+                       android:textColor="@color/dark"
+                       android:textSize="12dp" />
+
+               </LinearLayout>
+           </LinearLayout>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="5dp"
+               android:background="@drawable/light_border"
+               android:fontFamily="@font/regular"
+               android:padding="5dp"
+               android:text="Valid for 24 hours from booking time only."
+               android:textColor="@color/dark"
+               android:textSize="12dp" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:fontFamily="@font/bold"
+               android:text="@string/title"
+               android:textAllCaps="true"
+               android:textColor="@color/dark"
+               android:textSize="12dp" />
+
+       </LinearLayout>
+
+       <Button
+           android:id="@+id/btnclear"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginTop="20dp"
+           android:background="@drawable/secondary_button"
+           android:fontFamily="@font/regular"
+           android:gravity="center"
+           android:text="BACK"
+           android:textColor="@color/yellow"
+           android:textSize="20dp"/>
+
+   </LinearLayout>
+</FrameLayout>

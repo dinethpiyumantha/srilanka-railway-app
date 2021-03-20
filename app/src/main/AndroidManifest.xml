@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SriLankaRailwayDigital">
-        <activity android:name=".TicketBookStation"></activity>
+        <activity android:name=".TicketBookingForm"></activity>
+        <activity android:name=".Main" />
+        <activity android:name=".TicketBookStation" />
         <activity android:name=".UserProfile" />
         <activity android:name=".CreateUser" />
         <activity android:name=".UserLogin" />
