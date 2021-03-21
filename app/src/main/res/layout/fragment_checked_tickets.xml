@@ -6,6 +6,99 @@
     android:background="@color/dark"
     tools:context=".CheckedTickets">
 
-    
+    <LinearLayout
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:gravity="end"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/htitle"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/semibold"
+            android:text="CHECKED TICKETS"
+            android:textColor="@color/gray_light"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_edit"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="10dp"
+            android:layout_marginVertical="20dp"
+            android:drawableLeft="@drawable/ic_baseline_search_24"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="15dp"
+            android:paddingVertical="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/ic_ticket_check_bg"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:background="@drawable/ic_baseline_keyboard_arrow_right_24" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20-03-2021   10.15 AM"
+                    android:fontFamily="@font/regular"
+                    android:textSize="12dp"
+                    android:textColor="@color/dark"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Colombo Commuter"
+                    android:textColor="@color/dark"
+                    android:fontFamily="@font/bold"
+                    android:textSize="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID - T0010031"
+                    android:fontFamily="@font/regular"
+                    android:textSize="12dp"
+                    android:textColor="@color/dark"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnfind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/primary_button"
+            android:fontFamily="@font/regular"
+            android:text="BACK"
+            android:textColor="@color/dark"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
 
 </FrameLayout>

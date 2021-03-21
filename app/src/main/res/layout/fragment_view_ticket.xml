@@ -43,99 +43,99 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center_horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/bold"
-            android:text="Destination"
-            android:textColor="@color/gray_light"
-            android:textSize="12dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/bold"
+                android:text="Destination"
+                android:textColor="@color/gray_light"
+                android:textSize="12dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/regular"
-            android:text="Colombo Fort - Kurunegala"
-            android:textColor="@color/gray_light"
-            android:textSize="12dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:text="Colombo Fort - Kurunegala"
+                android:textColor="@color/gray_light"
+                android:textSize="12dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/bold"
-            android:text="Train"
-            android:textColor="@color/gray_light"
-            android:textSize="12dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/bold"
+                android:text="Train"
+                android:textColor="@color/gray_light"
+                android:textSize="12dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/regular"
-            android:text="Colombo Commuter (Office Train)"
-            android:textColor="@color/gray_light"
-            android:textSize="12dp" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal"
-            android:paddingHorizontal="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:text="Colombo Commuter (Office Train)"
+                android:textColor="@color/gray_light"
+                android:textSize="12dp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="start"
-                android:orientation="vertical">
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="20dp">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:fontFamily="@font/bold"
-                    android:text="Class"
-                    android:textColor="@color/gray_light"
-                    android:textSize="12dp" />
+                    android:gravity="start"
+                    android:orientation="vertical">
 
-                <TextView
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/bold"
+                        android:text="Class"
+                        android:textColor="@color/gray_light"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:text="2"
+                        android:textColor="@color/gray_light"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/regular"
-                    android:text="2"
-                    android:textColor="@color/gray_light"
-                    android:textSize="12dp" />
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="end"
+                    android:orientation="vertical">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/bold"
+                        android:text="Valid True"
+                        android:textColor="@color/gray_light"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:text="20-03-2021  12.00AM"
+                        android:textColor="@color/gray_light"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="30dp"
-                android:gravity="end"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:fontFamily="@font/bold"
-                    android:text="Valid True"
-                    android:textColor="@color/gray_light"
-                    android:textSize="12dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/regular"
-                    android:text="20-03-2021  12.00AM"
-                    android:textColor="@color/gray_light"
-                    android:textSize="12dp" />
-
-            </LinearLayout>
-        </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
