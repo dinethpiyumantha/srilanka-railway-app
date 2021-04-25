@@ -26,8 +26,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 //        Fragment change relativly to the menu
         BottomNavigationView bottomNavView = findViewById(R.id.bottomNavigationMenu);
         bottomNavView.setOnNavigationItemSelectedListener(navListner);
-
-
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListner =
@@ -56,7 +54,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
                     getSupportFragmentManager().beginTransaction().replace(R.id.nav_controller_view,
                             selectedFragment).commit();
-
                     return true;
                 }
             };
