@@ -11,8 +11,54 @@
         <item>Maradana</item>
         <item>Ragama</item>
     </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="lbl_my_reminders">MY REMINDERS</string>
     <string name="lbl_reminder">Reminder</string>
+    <string name="lblticket_booking">Ticket Booking</string>
+    <string name="lblfrom">From</string>
+    <string name="lblto">To</string>
+    <string name="lblattention">Attention</string>
+    <string name="btnbook_now">Book Now</string>
+    <string name="btncancel">Cancel</string>
+    <string name="lblmy_tickets">My Tickets</string>
+    <string name="lblticket_title">Digital Railway Ticket</string>
+    <string name="lbldestination">Destination</string>
+    <string name="lbltrain">Train</string>
+    <string name="lblprice">Price</string>
+    <string name="lblvalid">Valid True</string>
+    <string name="lbldate">Date</string>
+    <string name="lbltime">Time</string>
+    <string name="lblclass">Class</string>
+    <string name="btnselect_train">Select A Train</string>
+    <string name="btn_back">Back</string>
+    <string name="lblnotice">Notice</string>
+    <string name="lblu_profile">My Profile</string>
+    <string name="lbl_uname">Name</string>
+    <string name="lblphone">Phone</string>
+    <string name="lblemail">Email</string>
+    <string name="lblpw">Password</string>
+    <string name="lblcreate_user">Create An Account</string>
+    <string name="btncreate">Create</string>
+    <string name="btnforgot_login">Forgot Login Details</string>
+    <string name="btnnew_account">Create a New Account</string>
+    <string name="lbllogin">User Login</string>
+    <string name="btnupdate_user_pic">Update Profile Picture</string>
+    <string name="lblreminders">My Reminders</string>
+    <string name="btnedit">Edit</string>
+    <string name="btnclear">Clear</string>
+    <string name="btnapply">Apply</string>
+    <string name="lblarrival">Arrival Time</string>
+    <string name="lbldeparture">Departure Time</string>
+    <string name="lbltime_schedule">Time Schedule</string>
+    <string name="lblchange_train">Change Train</string>
+    <string name="lblchk_ticket">Cheked Tickets</string>
+    <string name="btnsave">Save</string>
+    <string name="btnout">Out</string>
+    <string name="lblnote">Note</string>
+    <string name="btnsave_note">Save Note</string>
+    <string name="btndelete">Delete</string>
+    <string name="btn_confirm">Confirm</string>
+    <string name="btnview">View</string>
+    <string name="lblview_ticket">View Ticket</string>
+
 </resources>
