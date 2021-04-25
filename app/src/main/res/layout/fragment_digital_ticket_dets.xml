@@ -1,3 +1,4 @@
+<!--Dineth -->
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -191,7 +192,7 @@
            android:fontFamily="@font/regular"
            android:gravity="center"
            android:text="BACK"
-           android:textColor="@color/yellow"
+           android:textColor="@color/dark"
            android:textSize="20dp"/>
 
    </LinearLayout>

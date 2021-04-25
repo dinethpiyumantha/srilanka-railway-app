@@ -1,8 +1,10 @@
+<!--Sandani-->
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/dark"
     tools:context=".ReminderEdit">
 
@@ -131,6 +133,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/secondary_button"
                 android:fontFamily="@font/regular"
+                app:backgroundTint="@null"
                 android:gravity="center"
                 android:text="CLEAR"
                 android:textColor="@color/yellow"

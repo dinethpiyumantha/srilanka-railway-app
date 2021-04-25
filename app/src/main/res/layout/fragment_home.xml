@@ -1,8 +1,12 @@
+<!--All
+Find Part ->Sandani
+-->
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/dark"
     tools:context=".Home">
 
@@ -27,7 +31,7 @@
             android:layout_width="315dp"
             android:layout_height="55dp"
             android:layout_marginTop="8dp"
-            android:backgroundTint="@null"
+            app:backgroundTint="@null"
             android:background="@drawable/header_bg"
             android:drawableLeft="@drawable/logo_80"
             android:fontFamily="@font/bold"
