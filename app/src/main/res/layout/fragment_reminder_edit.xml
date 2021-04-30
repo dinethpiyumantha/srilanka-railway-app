@@ -1,4 +1,3 @@
-<!--Sandani-->
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -117,7 +116,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btnfind"
+                android:id="@+id/btnBook"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
@@ -128,7 +127,7 @@
                 android:textSize="20dp" />
 
             <Button
-                android:id="@+id/btnclear"
+                android:id="@+id/btnCancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/secondary_button"

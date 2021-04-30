@@ -1,7 +1,8 @@
-<!--Dineth-->
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ticket_booking_form_frag"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark"
@@ -20,7 +21,7 @@
             android:fontFamily="@font/semibold"
             android:text="TICKET BOOKING"
             android:textColor="@color/gray_light"
-            android:textSize="20dp"/>
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/txtto"
@@ -34,6 +35,7 @@
             android:textSize="14dp" />
 
         <Spinner
+            android:id="@+id/spnFrom"
             android:layout_width="315dp"
             android:layout_height="35dp"
             android:layout_marginTop="4dp"
@@ -52,6 +54,7 @@
             android:textSize="14dp" />
 
         <Spinner
+            android:id="@+id/spnTo"
             android:layout_width="315dp"
             android:layout_height="35dp"
             android:layout_marginTop="4dp"
@@ -75,17 +78,20 @@
                     android:layout_marginTop="12dp"
                     android:fontFamily="@font/semibold"
                     android:paddingLeft="12dp"
-                    android:text="TO"
+                    android:text="DATE"
                     android:textColor="@color/gray_light"
                     android:textSize="14dp" />
 
-                <Spinner
+                <Button
+                    android:id="@+id/btnDate"
+                    android:layout_marginTop="4dp"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
-                    android:layout_marginTop="4dp"
+                    android:text="Select..."
+                    android:textColor="@color/gray_light"
                     android:background="@drawable/secondary_spinner"
-                    android:entries="@array/stations"
-                    android:padding="5dp" />
+                    style="?android:spinnerStyle"
+                    app:backgroundTint="@null" />
 
             </LinearLayout>
 
@@ -101,56 +107,100 @@
                     android:layout_marginTop="12dp"
                     android:fontFamily="@font/semibold"
                     android:paddingLeft="12dp"
-                    android:text="TO"
+                    android:text="TIME"
                     android:textColor="@color/gray_light"
                     android:textSize="14dp" />
 
-                <Spinner
+                <Button
+                    android:id="@+id/btnTime"
+                    android:layout_marginTop="4dp"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
-                    android:layout_marginTop="4dp"
+                    android:text="Select..."
+                    android:textColor="@color/gray_light"
                     android:background="@drawable/secondary_spinner"
-                    android:entries="@array/stations"
-                    android:padding="5dp" />
+                    style="?android:spinnerStyle"
+                    app:backgroundTint="@null" />
 
             </LinearLayout>
 
         </LinearLayout>
 
+
+
+
         <LinearLayout
-            android:layout_width="147dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="147dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/semibold"
-                android:paddingLeft="12dp"
-                android:text="TO"
-                android:textColor="@color/gray_light"
-                android:textSize="14dp" />
+                android:orientation="vertical">
 
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:layout_marginTop="4dp"
-                android:background="@drawable/secondary_spinner"
-                android:entries="@array/stations"
-                android:padding="5dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/semibold"
+                    android:paddingLeft="12dp"
+                    android:text="CLASS"
+                    android:textColor="@color/gray_light"
+                    android:textSize="14dp" />
 
+                <Spinner
+                    android:id="@+id/spnClasses"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/secondary_spinner"
+                    android:entries="@array/classes"
+                    android:padding="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="147dp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/semibold"
+                    android:paddingLeft="12dp"
+                    android:text="QUANTITY"
+                    android:textColor="@color/gray_light"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/edtQty"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:textColor="@color/gray_light"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/secondary_spinner"
+                    android:entries="@array/classes"
+                    android:padding="5dp" />
+
+            </LinearLayout>
         </LinearLayout>
 
+
+
+
         <Button
-            android:id="@+id/btnfind"
+            android:id="@+id/btnBook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="40dp"
             android:background="@drawable/primary_button"
             android:fontFamily="@font/regular"
-            android:text="FIND"
+            android:text="@string/btnNext"
             android:textColor="@color/dark"
             android:textSize="20dp" />
     </LinearLayout>

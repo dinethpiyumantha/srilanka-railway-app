@@ -1,6 +1,3 @@
-<!--All
-Find Part ->Sandani
--->
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -70,6 +67,7 @@ Find Part ->Sandani
             android:textColor="@color/gray_light"
             android:textSize="14dp" />
 
+
         <Spinner
             android:id="@+id/spnmonth"
             android:layout_width="315dp"
@@ -78,7 +76,6 @@ Find Part ->Sandani
             android:background="@drawable/secondary_spinner"
             android:entries="@array/stations"
             android:padding="5dp" />
-
 
         <TextView
             android:id="@+id/txtto"
@@ -118,7 +115,7 @@ Find Part ->Sandani
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btnfind"
+                android:id="@+id/btnBook"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
@@ -129,10 +126,11 @@ Find Part ->Sandani
                 android:textSize="20dp" />
 
             <Button
-                android:id="@+id/btnclear"
+                android:id="@+id/btnCancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/secondary_button"
+                app:backgroundTint="@null"
                 android:fontFamily="@font/regular"
                 android:gravity="center"
                 android:text="CLEAR"
