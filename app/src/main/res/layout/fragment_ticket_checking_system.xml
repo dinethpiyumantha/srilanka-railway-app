@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/fragment4"
-        android:name="com.bugapocalypse.srilankarailwaydigital.CheckedTickets"
+        android:name="com.bugapocalypse.srilankarailwaydigital.AdminHome"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </FrameLayout>

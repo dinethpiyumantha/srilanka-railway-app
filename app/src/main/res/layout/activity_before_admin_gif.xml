@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow_dark"
+    tools:context=".before_admin_gif">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="44dp"
+        android:src="@drawable/trainred"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.266" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="367dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="258dp"
+        android:fontFamily="@font/bungee"
+        android:text="@string/welcome"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gifImageView"
+        app:layout_constraintVertical_bias="0.192" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

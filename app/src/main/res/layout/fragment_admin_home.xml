@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    tools:context=".AdminHome">
+
+    <LinearLayout
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center_horizontal"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/htitle"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="100dp"
+            android:fontFamily="@font/semibold"
+            android:text="SUPERVICE MENU"
+            android:textColor="@color/gray_light"
+            android:textSize="20dp" />
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/button2"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/primary_button"
+                    android:padding="30dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_qrcode"
+                    android:text="Button" />
+
+                <ImageButton
+                    android:id="@+id/button"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Button" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/button4"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:text="Button" />
+
+                <ImageButton
+                    android:id="@+id/button3"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Button" />
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
