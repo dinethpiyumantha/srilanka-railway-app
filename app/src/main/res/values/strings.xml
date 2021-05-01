@@ -249,5 +249,8 @@
     <string name="lblview_ticket">View Ticket</string>
     <string name="btnbook">BOOK NOW</string>
     <string name="btnNext">NEXT</string>
+    <string name="qty_required">Ticket quantity is required.</string>
+    <string name="channel_name">Notification</string>
+    <string name="channel_description">Notification Description</string>
 
 </resources>

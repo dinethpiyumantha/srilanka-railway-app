@@ -7,10 +7,37 @@ public class Ticket {
     private String from;
     private String to;
     private String date;
+    private String time;
     private String trclass;
+    private String qty;
     private String train;
+    private String approve;
+
+    public String getQty() {
+        return qty;
+    }
+
+    public void setQty(String qty) {
+        this.qty = qty;
+    }
 
     public Ticket() {
+    }
+
+    public String getApprove() {
+        return approve;
+    }
+
+    public void setApprove(String approve) {
+        this.approve = approve;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
     public String getId() {

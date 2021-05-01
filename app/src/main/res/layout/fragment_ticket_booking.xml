@@ -182,6 +182,8 @@
                     android:layout_height="35dp"
                     android:textColor="@color/gray_light"
                     android:layout_marginTop="4dp"
+                    android:paddingLeft="12dp"
+                    android:textSize="14dp"
                     android:background="@drawable/secondary_spinner"
                     android:entries="@array/classes"
                     android:padding="5dp" />
