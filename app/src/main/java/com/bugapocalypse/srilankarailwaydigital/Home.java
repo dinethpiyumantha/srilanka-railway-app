@@ -15,8 +15,8 @@ public class Home extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        //        Dropdown menu
+//         Inflate the layout for this fragment
+//                Dropdown menu
 //        Spinner spin = this.findViewById(R.id.spnmonth);
 //        ArrayAdapter adapter = ArrayAdapter.createFromResource(
 //                this,
@@ -27,6 +27,7 @@ public class Home extends Fragment {
 //        spin.setAdapter(adapter);
 //        spin.setOnItemSelectedListener(this);
 //
+
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
 }
