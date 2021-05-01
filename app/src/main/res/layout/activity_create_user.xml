@@ -124,7 +124,7 @@
             android:gravity="center_horizontal" />
 
         <Button
-            android:id="@+id/btnfind"
+            android:id="@+id/btnBook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -134,12 +134,12 @@
             android:textColor="@color/dark"
             android:textSize="20dp"
             app:layout_constraintBottom_toTopOf="@+id/vmenu"
-            app:layout_constraintEnd_toStartOf="@+id/btnclear"
+            app:layout_constraintEnd_toStartOf="@+id/btnCancel"
             app:layout_constraintHorizontal_bias="0.347"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/btnclear"
+            android:id="@+id/btnCancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"

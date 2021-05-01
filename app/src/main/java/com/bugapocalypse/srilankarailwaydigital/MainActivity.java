@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         bottomNavView.setOnNavigationItemSelectedListener(navListner);
     }
 
+//    Main Home Nav
     private BottomNavigationView.OnNavigationItemSelectedListener navListner =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
