@@ -1,3 +1,4 @@
+// Dineth
 package com.bugapocalypse.srilankarailwaydigital;
 
 import android.app.AlertDialog;
@@ -34,52 +35,54 @@ import static android.content.ContentValues.TAG;
 
 public class TicketBooking extends Fragment implements AdapterView.OnItemSelectedListener {
 
-//    Object Declarations
+    // Item Declaration
     Button btnNext, btnDate, btnTime;
     Spinner spnFrom, spnTo, spnClasses;
     EditText edtQty;
-
     DatePickerDialog.OnDateSetListener dateSetListener;
     TimePickerDialog.OnTimeSetListener timeSetListener;
 
+    // Data attribute declaration
     Ticket ticketBookingIns;
 
-
-//    ON CREATE FRAGMENT
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+//        Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_ticket_booking, container, false);
 
-
-//        Initialize Objects
+        // Initialize items from xml
         spnFrom = view.findViewById(R.id.spnFrom);
         spnTo = view.findViewById(R.id.spnTo);
         spnClasses = view.findViewById(R.id.spnClasses);
         edtQty = view.findViewById(R.id.edtQty);
+        btnNext = view.findViewById(R.id.btnBook);
+        btnDate = view.findViewById(R.id.btnDate);
+        btnTime = view.findViewById(R.id.btnTime);
 
-//        Set Arrays to Dropdowns
-        ArrayAdapter adapter = ArrayAdapter.createFromResource( getContext(), R.array.stations, R.layout.custom_spinner_light);
+        // Set values to Spinners
+        // --> Station List (From, To)
+        ArrayAdapter stationAdapter = ArrayAdapter.createFromResource( getContext(), R.array.stations, R.layout.custom_spinner_light);
+        stationAdapter.setDropDownViewResource(R.layout.custom_spinner_light_drop);
+        spnFrom.setAdapter(stationAdapter); // Form
+        spnTo.setAdapter(stationAdapter); // To
+
+        // --> Classes List
         ArrayAdapter classAdapter = ArrayAdapter.createFromResource( getContext(), R.array.classes, R.layout.custom_spinner_light);
-        adapter.setDropDownViewResource(R.layout.custom_spinner_light_drop);
         classAdapter.setDropDownViewResource(R.layout.custom_spinner_light_drop);
-
-        spnFrom.setAdapter(adapter);
-        spnTo.setAdapter(adapter);
         spnClasses.setAdapter(classAdapter);
 
+        // --> Set Selected Listeners to Spinners
         spnFrom.setOnItemSelectedListener(this);
         spnTo.setOnItemSelectedListener(this);
         spnClasses.setOnItemSelectedListener(this);
 
-//        Go to Next Frag Button
-        btnNext = view.findViewById(R.id.btnBook);
+        // Next button listener
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-//                Submit after validtion checking
+                // Form Validations
                 if (btnDate.getText().toString().equals("Select...")) {
                     btnDate.setError("Please Select a Date!");
                     btnDate.requestFocus();
@@ -90,12 +93,14 @@ public class TicketBooking extends Fragment implements AdapterView.OnItemSelecte
                     edtQty.setError("Ticket quantity is required!");
                     edtQty.requestFocus();
                 } else {
+
+                    // No Validation Errors
+                    // Provide a Toast
                     String from = (spnFrom.getSelectedItem().toString() + " To " + spnTo.getSelectedItem().toString() + " On " + btnDate.getText());
                     Toast.makeText(getContext(), from, Toast.LENGTH_SHORT).show();
 
+                    // Create a Bundle and assign values for Pass values to TicketFormStation()
                     TicketFormStation t = new TicketFormStation();
-
-//                    Pass Values
                     Bundle args = new Bundle();
                     args.putString("from", spnFrom.getSelectedItem().toString());
                     args.putString("to", spnTo.getSelectedItem().toString());
@@ -103,8 +108,9 @@ public class TicketBooking extends Fragment implements AdapterView.OnItemSelecte
                     args.putString("time", btnTime.getText().toString());
                     args.putString("class", spnClasses.getSelectedItem().toString());
                     args.putString("qty", edtQty.getText().toString());
-
                     t.setArguments(args);
+
+                    // Change to TicketFormStation fragment
                     FragmentTransaction tra = getFragmentManager().beginTransaction();
                     tra.replace(R.id.frag_ticket_default, t);
                     tra.commit();
@@ -112,9 +118,8 @@ public class TicketBooking extends Fragment implements AdapterView.OnItemSelecte
             }
         });
 
-//        Date Picker
-        btnDate = view.findViewById(R.id.btnDate);
 
+        // Date Picker Button Implementation for OnClick
         btnDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -128,6 +133,7 @@ public class TicketBooking extends Fragment implements AdapterView.OnItemSelecte
             }
         });
 
+        // Set Date to Button Text after select
         dateSetListener = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker datePicker, int year, int month, int day) {
@@ -139,8 +145,8 @@ public class TicketBooking extends Fragment implements AdapterView.OnItemSelecte
             }
         };
 
-//        Time Picker
-        btnTime = view.findViewById(R.id.btnTime);
+
+        // Time Picker Button Implementation for OnClick
         btnTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -153,6 +159,7 @@ public class TicketBooking extends Fragment implements AdapterView.OnItemSelecte
             }
         });
 
+        // Set Time to Button Text after select
         timeSetListener = new TimePickerDialog.OnTimeSetListener() {
             @Override
             public void onTimeSet(TimePicker view, int hours, int minute) {

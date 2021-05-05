@@ -1,7 +1,13 @@
 package com.bugapocalypse.srilankarailwaydigital.data;
 
-public class Ticket {
+import android.os.Parcel;
+import android.os.Parcelable;
 
+import java.io.Serializable;
+
+public class Ticket implements Parcelable {
+
+    // Declaration of properties
     private String id;
     private String userId;
     private String from;
@@ -11,7 +17,49 @@ public class Ticket {
     private String trclass;
     private String qty;
     private String train;
+    private String price;
     private String approve;
+
+    // Constructor
+    public Ticket() {
+        approve = "0";
+    }
+
+    // Constructor for create a parcel
+    protected Ticket(Parcel in) {
+        id = in.readString();
+        userId = in.readString();
+        from = in.readString();
+        to = in.readString();
+        date = in.readString();
+        time = in.readString();
+        trclass = in.readString();
+        qty = in.readString();
+        train = in.readString();
+        price = in.readString();
+        approve = in.readString();
+    }
+
+    public static final Creator<Ticket> CREATOR = new Creator<Ticket>() {
+        @Override
+        public Ticket createFromParcel(Parcel in) {
+            return new Ticket(in);
+        }
+
+        @Override
+        public Ticket[] newArray(int size) {
+            return new Ticket[size];
+        }
+    };
+
+    // Getters and Setters
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
 
     public String getQty() {
         return qty;
@@ -19,9 +67,6 @@ public class Ticket {
 
     public void setQty(String qty) {
         this.qty = qty;
-    }
-
-    public Ticket() {
     }
 
     public String getApprove() {
@@ -94,5 +139,25 @@ public class Ticket {
 
     public void setTrain(String train) {
         this.train = train;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(id);
+        dest.writeString(userId);
+        dest.writeString(from);
+        dest.writeString(to);
+        dest.writeString(date);
+        dest.writeString(time);
+        dest.writeString(trclass);
+        dest.writeString(qty);
+        dest.writeString(train);
+        dest.writeString(price);
+        dest.writeString(approve);
     }
 }
