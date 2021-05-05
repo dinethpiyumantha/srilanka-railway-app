@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/dark"
+    tools:context=".AdminHome">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="437dp"
+            android:layout_height="317dp"
+            android:src="@drawable/hamoe_image"
+
+
+            />
+
+        <LinearLayout
+            android:layout_width="410dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+
+            >
+
+            <Button
+
+                android:id="@+id/button5"
+                android:layout_width="200dp"
+                android:layout_height="160px"
+                android:layout_gravity="center"
+                android:layout_marginLeft="80dp"
+                android:background="@drawable/primary_button"
+                android:text="@string/checkTicket"
+                android:textColor="@color/dark"
+                android:backgroundTint="@null" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:background="@color/yellow_dark"
+                android:padding="10dp"
+
+                android:src="@drawable/ic_qrcode" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="410dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+
+            >
+
+            <Button
+
+                android:id="@+id/btnCheck"
+                android:layout_width="200dp"
+                android:layout_height="160px"
+                android:layout_gravity="center"
+                android:layout_marginLeft="80dp"
+                android:background="@drawable/primary_button"
+                android:text="@string/checked"
+                android:textColor="@color/dark"
+                android:backgroundTint="@null" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:background="#918D31"
+                android:padding="10dp"
+
+                android:src="@drawable/ic_eye_solid" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="410dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+
+            >
+
+            <Button
+
+                android:id="@+id/button7"
+                android:layout_width="200dp"
+                android:layout_height="160px"
+                android:layout_gravity="center"
+                android:layout_marginLeft="80dp"
+                android:background="@drawable/primary_button"
+                android:text="@string/today"
+                android:textColor="@color/dark"
+                android:backgroundTint="@null" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:background="#918D31"
+                android:padding="10dp"
+
+                android:src="@drawable/ic_chart_pie_solid" />
+
+        </LinearLayout>
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="match_parent"
+            android:layout_height="148dp"
+            android:src="@drawable/trainred" />
+
+
+    </LinearLayout>
+
+</FrameLayout>

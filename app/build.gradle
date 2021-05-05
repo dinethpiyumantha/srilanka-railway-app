@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.bugapocalypse.srilankarailwaydigital"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -19,6 +19,7 @@ android {
 
     buildTypes {
         release {
+            dataBinding.enabled=true
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -37,15 +38,19 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment:2.3.2'
     implementation 'androidx.navigation:navigation-ui:2.3.2'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-
+    implementation 'com.google.android.material:material:1.0.0'
     implementation 'com.google.firebase:firebase-auth:20.0.4'
-
     implementation 'com.google.firebase:firebase-database:19.7.0'
-
+    
     implementation 'com.google.firebase:firebase-firestore:22.1.2'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+    implementation 'com.budiyev.android:code-scanner:2.1.0'
+    implementation 'com.karumi:dexter:6.0.0'
+
     implementation 'com.basgeekball:awesome-validation:4.2'
     // Import the BoM for the Firebase platform
     implementation platform('com.google.firebase:firebase-bom:27.1.0')
@@ -59,6 +64,4 @@ dependencies {
     // QR Code
     implementation 'com.journeyapps:zxing-android-embedded:3.4.0'
 
-    // FirebaseUI Storage only
-    implementation 'com.firebaseui:firebase-ui-storage:6.4.0'
 }
