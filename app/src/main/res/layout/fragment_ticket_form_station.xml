@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/dark"
     tools:context=".TicketFormStation">
 
@@ -58,6 +59,7 @@
                             android:textSize="14dp" />
 
                         <TextView
+                            android:id="@+id/txtFrom"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/light"
@@ -83,6 +85,7 @@
                             android:textSize="14dp" />
 
                         <TextView
+                            android:id="@+id/txtTo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/light"
@@ -94,7 +97,8 @@
 
                 </LinearLayout>
 
-                <TextView
+                <Spinner
+                    android:id="@+id/spnTrainSelect"
                     android:layout_width="223dp"
                     android:layout_height="61dp"
                     android:layout_marginTop="10dp"
@@ -102,7 +106,6 @@
                     android:fontFamily="@font/bold"
                     android:paddingHorizontal="10dp"
                     android:paddingVertical="5dp"
-                    android:text="Colombo Commuter"
                     android:textColor="@color/dark"
                     android:textSize="18dp" />
 
@@ -159,6 +162,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
                     android:background="@drawable/secondary_button"
+                    app:backgroundTint="@null"
                     android:fontFamily="@font/regular"
                     android:gravity="center"
                     android:text="CANCEL"

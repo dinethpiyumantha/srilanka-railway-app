@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/dark"
     tools:context=".AboutUs">
-
     <LinearLayout
         android:layout_width="276dp"
         android:layout_height="602dp"
@@ -91,6 +90,7 @@
 
         <Button
             android:id="@+id/logout1"
+            android:id="@+id/btnCancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"

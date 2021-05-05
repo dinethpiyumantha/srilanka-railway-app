@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/dark"
     tools:context=".Home">
 <!--Hello-->
@@ -23,11 +24,11 @@
             android:textSize="20dp" />
 
         <Button
-            android:id="@+id/hname"
+            android:id="@+id/btnTitle"
             android:layout_width="315dp"
             android:layout_height="55dp"
             android:layout_marginTop="8dp"
-            android:backgroundTint="@null"
+            app:backgroundTint="@null"
             android:background="@drawable/header_bg"
             android:drawableLeft="@drawable/logo_80"
             android:fontFamily="@font/bold"
@@ -66,6 +67,7 @@
             android:textColor="@color/gray_light"
             android:textSize="14dp" />
 
+
         <Spinner
             android:id="@+id/spnmonth"
             android:layout_width="315dp"
@@ -74,7 +76,6 @@
             android:background="@drawable/secondary_spinner"
             android:entries="@array/stations"
             android:padding="5dp" />
-
 
         <TextView
             android:id="@+id/txtto"
@@ -129,6 +130,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/secondary_button"
+                app:backgroundTint="@null"
                 android:fontFamily="@font/regular"
                 android:gravity="center"
                 android:text="CLEAR"

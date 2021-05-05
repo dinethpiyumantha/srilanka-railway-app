@@ -8,12 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class TicketManagement extends Fragment {
+public class QRScanner extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ticket_management, container, false);
+        return inflater.inflate(R.layout.fragment_q_r_scanner, container, false);
     }
 }
