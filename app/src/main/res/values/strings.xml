@@ -252,4 +252,24 @@
     <string name="qty_required">Ticket quantity is required.</string>
     <string name="channel_name">Notification</string>
     <string name="channel_description">Notification Description</string>
+
+    <string-array name="train_array">
+        <item>Udarata Menike\n(10:30 - 11:30)</item>
+        <item>Podi Menike\n(10:30 - 11:30)</item>
+        <item>Tikiri Menike\n(10:30 - 11:30)</item>
+        <item>Senkadagala Menike\n(10:30 - 11:30)</item>
+        <item>Yal Devi\n(10:30 - 11:30)</item>
+        <item>Uttara Devi\n(10:30 - 11:30)</item>
+        <item>Udaya Devi\n(10:30 - 11:30)</item>
+        <item>Rajarata Rejini\n(10:30 - 11:30)</item>
+        <item>Ruhunu Kumari\n(10:30 - 11:30)</item>
+        <item>Muthu Kumari\n(10:30 - 11:30)</item>
+        <item>Samudra Devi\n(10:30 - 11:30)</item>
+        <item>Galu Kumari\n(10:30 - 11:30)</item>
+        <item>Sagarika\n(10:30 - 11:30)</item>
+        <item>Sri Devi\n(10:30 - 11:30)</item>
+        <item>Meena Gaya\n(10:30 - 11:30)</item>
+        <item>Deyata Kirula\n(10:30 - 11:30)</item>
+        <item>Denuwara Manike\n(10:30 - 11:30)</item>
+    </string-array>
 </resources>

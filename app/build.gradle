@@ -58,4 +58,7 @@ dependencies {
 
     // QR Code
     implementation 'com.journeyapps:zxing-android-embedded:3.4.0'
+
+    // FirebaseUI Storage only
+    implementation 'com.firebaseui:firebase-ui-storage:6.4.0'
 }
