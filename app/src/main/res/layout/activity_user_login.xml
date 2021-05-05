@@ -2,21 +2,23 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/passwordL"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark"
     tools:context=".UserLogin">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:layout_width="273dp"
+        android:layout_height="373dp"
+        android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.536">
 
         <TextView
             android:id="@+id/htitle"
@@ -29,60 +31,79 @@
             android:textSize="20dp" />
 
         <EditText
+            android:id="@+id/UsernameL"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:hint="USERNAME"
-            android:fontFamily="@font/bold"
-            android:textColor="@color/gray_light"
-            android:textSize="16dp"
-            android:textColorHint="@color/yellow"
-            android:textAlignment="center"
             android:backgroundTint="@color/yellow"
-            android:gravity="center_horizontal" />
+            android:fontFamily="@font/bold"
+            android:gravity="center_horizontal"
+            android:hint="USERNAME"
+            android:textAlignment="center"
+            android:textColor="@color/gray_light"
+            android:textColorHint="@color/yellow"
+            android:textSize="16dp" />
 
         <EditText
+            android:id="@+id/logPaswrd"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:inputType="textPassword"
-            android:hint="PASSWORD"
-            android:fontFamily="@font/bold"
-            android:textColor="@color/gray_light"
-            android:textSize="16dp"
-            android:textColorHint="@color/yellow"
-            android:textAlignment="center"
             android:backgroundTint="@color/yellow"
-            android:gravity="center_horizontal" />
+            android:fontFamily="@font/bold"
+            android:gravity="center_horizontal"
+            android:hint="PASSWORD"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColor="@color/gray_light"
+            android:textColorHint="@color/yellow"
+            android:textSize="16dp" />
 
         <Button
-            android:id="@+id/btnBook"
+            android:id="@+id/login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:background="@drawable/primary_button"
             android:fontFamily="@font/regular"
-            android:text="FIND"
+            android:text="Log In"
             android:textColor="@color/dark"
-            android:textSize="20dp"/>
+            android:textSize="20dp" />
 
         <TextView
+            android:id="@+id/ResetPasswordBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:fontFamily="@font/bold"
             android:text="Forgot login details"
             android:textColor="@color/yellow"
-            android:fontFamily="@font/bold"
-            android:textSize="15dp"/>
+            android:textSize="15dp" />
 
         <TextView
+            android:id="@+id/CreatBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:fontFamily="@font/bold"
+            android:onClick="gotoCreate"
             android:text="Create a New Account"
             android:textColor="@color/yellow"
-            android:fontFamily="@font/bold"
-            android:textSize="15dp"/>
+            android:textSize="15dp" />
     </LinearLayout>
-\
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#515050"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.879" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

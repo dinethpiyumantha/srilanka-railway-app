@@ -30,11 +30,12 @@
             />
 
         <TextView
+            android:id="@+id/UserName_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/light"
-            android:layout_gravity="center_horizontal"
             android:text="username"
             android:textAlignment="center"
             android:textColor="@color/gray_light"
@@ -59,6 +60,7 @@
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/full_Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/light"
@@ -80,6 +82,7 @@
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/phone_Profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/light"
@@ -101,6 +104,7 @@
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/Email_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/light"
@@ -140,7 +144,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btnBook"
+                android:id="@+id/login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
@@ -151,7 +155,7 @@
                 android:textSize="20dp" />
 
             <Button
-                android:id="@+id/btnCancel"
+                android:id="@+id/logout1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
