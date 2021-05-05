@@ -252,5 +252,4 @@
     <string name="qty_required">Ticket quantity is required.</string>
     <string name="channel_name">Notification</string>
     <string name="channel_description">Notification Description</string>
-
 </resources>
