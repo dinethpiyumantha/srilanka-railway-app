@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".UserManagement">
 
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment2"
         android:name="com.bugapocalypse.srilankarailwaydigital.Profile"
         android:layout_width="match_parent"
