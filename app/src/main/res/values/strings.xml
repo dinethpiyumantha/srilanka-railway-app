@@ -67,5 +67,6 @@
     <string name="checked">Checked Ticket</string>
     <string name="today">today checked report</string>
     <string name="Scanning">Scanning.............</string>
+    <string name="textview">TextView</string>
 
 </resources>

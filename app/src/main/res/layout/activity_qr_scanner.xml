@@ -4,17 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Qr_scanner">
+    tools:context=".Qr_scanner"
 
+    android:id="@+id/qrScan"
+    >
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textColor="@color/gray_light"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="4dp" />
 
     <com.budiyev.android.codescanner.CodeScannerView
         android:id="@+id/scannerView"

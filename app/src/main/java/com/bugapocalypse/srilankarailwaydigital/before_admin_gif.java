@@ -21,7 +21,7 @@ public class before_admin_gif extends AppCompatActivity {
             @Override
             public void run() {
                 Intent intent = new Intent(before_admin_gif.this,Qr_scanner.class);
-                startActivities(new Intent[]{intent});
+                startActivity(intent);
                 finish();
             }
         },5000);
