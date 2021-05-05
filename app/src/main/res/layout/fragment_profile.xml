@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/dark"
     tools:context=".Profile">
 
@@ -29,11 +30,12 @@
             />
 
         <TextView
+            android:id="@+id/UserName_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/light"
-            android:layout_gravity="center_horizontal"
             android:text="username"
             android:textAlignment="center"
             android:textColor="@color/gray_light"
@@ -58,6 +60,7 @@
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/full_Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/light"
@@ -79,6 +82,7 @@
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/phone_Profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/light"
@@ -100,6 +104,7 @@
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/Email_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/light"
@@ -139,7 +144,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btnfind"
+                android:id="@+id/login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
@@ -150,14 +155,15 @@
                 android:textSize="20dp" />
 
             <Button
-                android:id="@+id/btnclear"
+                android:id="@+id/logout1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
+                app:backgroundTint="@null"
                 android:background="@drawable/secondary_button"
                 android:fontFamily="@font/regular"
                 android:gravity="center"
-                android:text="CANCEL"
+                android:text="SIGN OUT"
                 android:textColor="@color/yellow"
                 android:textSize="20dp"/>
 
