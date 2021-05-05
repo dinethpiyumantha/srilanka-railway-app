@@ -97,7 +97,8 @@
 
                 </LinearLayout>
 
-                <TextView
+                <Spinner
+                    android:id="@+id/spnTrainSelect"
                     android:layout_width="223dp"
                     android:layout_height="61dp"
                     android:layout_marginTop="10dp"
@@ -105,7 +106,6 @@
                     android:fontFamily="@font/bold"
                     android:paddingHorizontal="10dp"
                     android:paddingVertical="5dp"
-                    android:text="Colombo Commuter"
                     android:textColor="@color/dark"
                     android:textSize="18dp" />
 
@@ -146,7 +146,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btnBook"
+                    android:id="@+id/login"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
@@ -157,7 +157,7 @@
                     android:textSize="20dp" />
 
                 <Button
-                    android:id="@+id/btnCancel"
+                    android:id="@+id/logout1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"

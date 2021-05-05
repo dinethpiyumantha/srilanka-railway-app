@@ -16,7 +16,7 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btnCancel"
+            android:id="@+id/logout1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/secondary_button"
@@ -38,73 +38,10 @@
             android:textSize="20dp"/>
 
 <!--        btnTicket-->
-        <LinearLayout
-            android:id="@+id/btnTicket"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/ic_ticket_selector"
-            android:orientation="vertical"
-            android:paddingVertical="10dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/bold"
-                android:text="Colombo Commuter"
-                android:textColor="@color/dark"
-                android:textSize="16dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/regular"
-                android:text="Colombo Fort - Kurunegala"
-                android:textColor="@color/dark"
-                android:textSize="12dp" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingVertical="5dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/bold"
-                        android:text="20-03-2021"
-                        android:textColor="@color/dark"
-                        android:textSize="12dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/bold"
-                        android:text="12:00 AM"
-                        android:textColor="@color/dark"
-                        android:textSize="12dp" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:fontFamily="@font/extrabold"
-                    android:text="LKR 350.00"
-                    android:textColor="@color/dark"
-                    android:textSize="30dp" />
-
-            </LinearLayout>
-        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/my_tickets_list"
+            android:layout_width="match_parent"
+            android:layout_height="460dp"
+            android:background="@color/dark"/>
     </LinearLayout>
 </FrameLayout>

@@ -91,7 +91,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btnBook"
+                    android:id="@+id/login"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
@@ -102,7 +102,7 @@
                     android:textSize="20dp" />
 
                 <Button
-                    android:id="@+id/btnCancel"
+                    android:id="@+id/logout1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"

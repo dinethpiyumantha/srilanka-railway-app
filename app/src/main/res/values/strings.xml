@@ -247,6 +247,17 @@
     <string name="btn_confirm">Confirm</string>
     <string name="btnview">View</string>
     <string name="lblview_ticket">View Ticket</string>
+
+    <string name="welcome">Welcome to ticket checking admin panel</string>
+    <string name="Login">Login</string>
+    <string name="Register">REGISTER</string>
+    <string name="checkTicket">Check Ticket</string>
+    <string name="checked">Checked Ticket</string>
+    <string name="today">today checked report</string>
+    <string name="Scanning">Scanning.............</string>
+    <string name="textview">TextView</string>
+
+
     <string name="btnbook">BOOK NOW</string>
     <string name="btnNext">NEXT</string>
     <string name="qty_required">Ticket quantity is required.</string>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ticket_item"
+    app:background="@color/dark"
+    app:backgroundTint="@color/dark"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="8dp"
+        android:background="@color/dark">
+
+
+
+        <LinearLayout
+            android:id="@+id/btnTicket"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@drawable/ic_ticket_selector"
+            android:orientation="vertical"
+            android:paddingVertical="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/trainName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bold"
+                        android:text="Colombo Commuter"
+                        android:textColor="@color/dark"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/fromTo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:text="Colombo Fort - Kurunegala"
+                        android:textColor="@color/dark"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="end">
+
+                    <ImageButton
+                        android:id="@+id/btnDeleteItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@null"
+                        android:src="@drawable/ic_baseline_delete_24"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="5dp">
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bold"
+                        android:text="20-03-2021"
+                        android:textColor="@color/dark"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bold"
+                        android:text="12:00 AM"
+                        android:textColor="@color/dark"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/extrabold"
+                    android:text="LKR 350.00"
+                    android:textColor="@color/dark"
+                    android:textSize="30dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

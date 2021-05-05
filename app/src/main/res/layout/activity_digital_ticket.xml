@@ -35,7 +35,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/txtclass"
+            android:id="@+id/txtClass"
             android:layout_width="143dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/bold"
@@ -73,9 +73,11 @@
             android:textSize="12dp" />
 
         <ImageView
+            android:id="@+id/qrCodeImage"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
             android:padding="5dp" />
 
         <TextView
@@ -88,6 +90,7 @@
             android:textSize="12dp" />
 
         <TextView
+            android:id="@+id/txtRoute"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/regular"
@@ -105,6 +108,7 @@
             android:textSize="12dp" />
 
         <TextView
+            android:id="@+id/txtTrain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/regular"
@@ -135,6 +139,7 @@
                     android:textSize="12dp" />
 
                 <TextView
+                    android:id="@+id/txtPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/regular"
@@ -162,6 +167,7 @@
                     android:textSize="12dp" />
 
                 <TextView
+                    android:id="@+id/txtDateTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/regular"
@@ -197,7 +203,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnCancel"
+        android:id="@+id/logout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/secondary_button"
