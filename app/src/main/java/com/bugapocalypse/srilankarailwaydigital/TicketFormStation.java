@@ -32,6 +32,8 @@ import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
 import com.bugapocalypse.srilankarailwaydigital.data.Ticket;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
@@ -55,6 +57,7 @@ public class TicketFormStation extends Fragment implements AdapterView.OnItemSel
     // DATABASE instances
     DatabaseReference dbRef; //Firebase Realtime DB
     FirebaseFirestore firestore; //Firebase Firestore
+    FirebaseUser firebaseUser;
 
     // Data Attribute Declaration
     Ticket ticket;
@@ -78,6 +81,7 @@ public class TicketFormStation extends Fragment implements AdapterView.OnItemSel
 
         // Getting Firestore static instance
         firestore = FirebaseFirestore.getInstance();
+        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
         // Getting passed values on create this from TicketBooking()
         Bundle args = this.getArguments();
@@ -86,9 +90,8 @@ public class TicketFormStation extends Fragment implements AdapterView.OnItemSel
 
         // Creating an Ticket Object and Set values to it
         ticket = new Ticket();
-        ticket.setId("1");
         ticket.setPrice("500.00");
-        ticket.setUserId("1");
+        ticket.setUserId(firebaseUser.getUid());
         ticket.setFrom(args.getString("from").toString().trim());
         ticket.setTo(args.getString("to").toString().trim());
         ticket.setDate(args.getString("date").toString().trim());
@@ -98,7 +101,7 @@ public class TicketFormStation extends Fragment implements AdapterView.OnItemSel
         ticket.setTrain("Sample");
 
         // Spinner for train selection
-        ArrayAdapter adapter = ArrayAdapter.createFromResource( getContext(), R.array.stations, R.layout.custom_spinner_light);
+        ArrayAdapter adapter = ArrayAdapter.createFromResource( getContext(), R.array.train_array, R.layout.custom_train_spinner);
         adapter.setDropDownViewResource(R.layout.custom_spinner_light_drop);
         spnTrainSelect.setAdapter(adapter);
         spnTrainSelect.setOnItemSelectedListener(this);
@@ -160,13 +163,8 @@ public class TicketFormStation extends Fragment implements AdapterView.OnItemSel
 
                     // Manipulate Ticket ID
                     Date date = new Date();
-                    String documentID = "U" + new SimpleDateFormat("yyyymmddHHmmss").format(date);
-//                    String documentID = "U" + new SimpleDateFormat("yyyy").format(date) +
-//                                    new SimpleDateFormat("mm").format(date) +
-//                                    new SimpleDateFormat("dd").format(date) +
-//                                    new SimpleDateFormat("HH").format(date) +
-//                                    new SimpleDateFormat("mm").format(date) +
-//                                    new SimpleDateFormat("ss").format(date);
+                    String documentID = "U" + firebaseUser.getUid().substring(0,4).toUpperCase() + new SimpleDateFormat("yyyymmddHHmmss").format(date);
+                    ticket.setId(documentID);
 
                     // Save data (object) to Firestore
                     DocumentReference documentReference = firestore.collection("Tickets").document(documentID);

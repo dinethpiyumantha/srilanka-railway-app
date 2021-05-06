@@ -21,6 +21,8 @@ import com.bugapocalypse.srilankarailwaydigital.Adapters.TicketAdapter;
 import com.bugapocalypse.srilankarailwaydigital.data.Ticket;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -48,6 +50,7 @@ public class MyTicket extends Fragment implements TicketAdapter.OnTicketListener
     // DATABASE instances
     DatabaseReference dbRef; //Firebase Realtime DB
     FirebaseFirestore firestore; //Firebase Firestore
+    FirebaseUser firebaseUser;
 
     // Ticket List declaration
     ArrayList<Ticket> list;
@@ -62,10 +65,12 @@ public class MyTicket extends Fragment implements TicketAdapter.OnTicketListener
 
         // Initializing Items
         recyclerView = view.findViewById(R.id.my_tickets_list);
+        btnBookNow = view.findViewById(R.id.btnBook);
 
 
         dbRef = FirebaseDatabase.getInstance().getReference("Ticket"); //Firestore getting instance by document
         firestore = FirebaseFirestore.getInstance(); //Realtime DB instance initialization
+        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
         // Set tickets to recycler view
         list = new ArrayList<>();
@@ -90,14 +95,13 @@ public class MyTicket extends Fragment implements TicketAdapter.OnTicketListener
                                 ticket.setQty(document.getData().get("qty").toString());
                                 ticket.setFrom(document.getData().get("from").toString());
                                 ticket.setTrclass(document.getData().get("trclass").toString());
-//                                ticket.setFrom(document.getData().get("id").toString());
                                 ticket.setTo(document.getData().get("to").toString());
                                 ticket.setTime(document.getData().get("time").toString());
-//                                ticket.setUserId(document.getData().get("userId").toString());
+                                ticket.setUserId(document.getData().get("userId").toString());
                                 ticket.setTrain(document.getData().get("train").toString());
                                 ticket.setPrice(document.getData().get("price").toString());
 
-                                if(ticket.getApprove().equals("1")) {
+                                if(ticket.getApprove().equals("1") && String.valueOf(firebaseUser.getUid()).equals(ticket.getUserId().toString())) {
                                     list.add(ticket);
                                 }
                             }
@@ -128,7 +132,7 @@ public class MyTicket extends Fragment implements TicketAdapter.OnTicketListener
 //        });
 
         // After perform on click on book button (Listener)
-        btnBookNow = view.findViewById(R.id.btnCancel);
+//        btnBookNow = view.findViewById(R.id.btnBook);
         btnBookNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="end"
-        android:background="@mipmap/poster">
+        android:background="@null">
 
         <ImageView
             android:id="@+id/imgP"
