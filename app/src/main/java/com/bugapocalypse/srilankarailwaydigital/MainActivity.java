@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                             selectedFragment = new TicketManagement();
                             break;
                         case R.id.menucheck:
-                            selectedFragment = new AdminHome();
+                            selectedFragment = new TicketCheckingSystem();
                             break;
                         case R.id.menuuser:
                             selectedFragment = new UserManagement();

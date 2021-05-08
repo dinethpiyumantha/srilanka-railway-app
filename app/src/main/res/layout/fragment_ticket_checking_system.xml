@@ -4,12 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TicketCheckingSystem"
-    android:id="@+id/ticketChekin"
+
     >
 
-    <fragment
-        android:id="@+id/fragment4"
-        android:name="com.bugapocalypse.srilankarailwaydigital.CheckedTickets"
+   <fragment
+        android:id="@+id/checking_default"
+        android:name="com.bugapocalypse.srilankarailwaydigital.AdminHome"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </FrameLayout>

@@ -5,7 +5,9 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/dark"
-    tools:context=".TicketNote">
+    tools:context=".TicketNote"
+    android:id="@+id/ticketnoteFagment"
+    >
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -34,6 +36,7 @@
                     android:textSize="20dp" />
 
                 <TextView
+                    android:id="@+id/ticketID"
                     android:layout_width="152dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/semibold"
@@ -71,6 +74,7 @@
                         android:textSize="12dp" />
 
                     <TextView
+                        android:id="@+id/destination"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/regular"
@@ -88,6 +92,7 @@
                         android:textSize="12dp" />
 
                     <TextView
+                        android:id="@+id/trainNamee"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/regular"
@@ -118,6 +123,7 @@
                                 android:textSize="12dp" />
 
                             <TextView
+                                android:id="@+id/classTrain"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/regular"
@@ -145,6 +151,7 @@
                                 android:textSize="12dp" />
 
                             <TextView
+                                android:id="@+id/dateAndTime"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/regular"
@@ -168,7 +175,7 @@
                     android:background="@drawable/header_bg">
 
                     <TextView
-                        android:id="@+id/userId"
+                        android:id="@+id/userIdnew"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
@@ -179,6 +186,7 @@
                         tools:ignore="InvalidId" />
 
                     <TextView
+                        android:id="@+id/fullNamenew"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/regular"
@@ -187,6 +195,7 @@
                         android:textSize="18dp" />
 
                     <TextView
+                        android:id="@+id/numbernew"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/regular"
@@ -195,6 +204,7 @@
                         android:textSize="18dp" />
 
                     <TextView
+                        android:id="@+id/emailnew"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/regular"
@@ -217,6 +227,7 @@
                 android:textSize="14dp" />
 
             <EditText
+                android:id="@+id/note"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textMultiLine"
@@ -231,28 +242,16 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/login"
+                    android:id="@+id/checkTicket"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
                     android:background="@drawable/primary_button"
                     android:fontFamily="@font/regular"
-                    android:text="SAVE NOTE"
+                    android:text="Check ticket"
                     android:textColor="@color/dark"
                     android:textSize="20dp" />
 
-                <Button
-                    android:id="@+id/logout1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
-                    app:backgroundTint="@null"
-                    android:background="@drawable/secondary_button"
-                    android:fontFamily="@font/regular"
-                    android:gravity="center"
-                    android:text="DELETE"
-                    android:textColor="@color/yellow"
-                    android:textSize="20dp"/>
 
             </LinearLayout>
         </LinearLayout>

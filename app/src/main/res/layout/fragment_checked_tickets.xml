@@ -24,16 +24,18 @@
             android:textColor="@color/gray_light"
             android:textSize="20dp"/>
 
-        <EditText
+
+
+        <SearchView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="1dp"
             android:background="@drawable/search_edit"
-            android:paddingVertical="5dp"
+            android:drawableLeft="@drawable/ic_baseline_search_24"
             android:paddingHorizontal="10dp"
-            android:layout_marginVertical="20dp"
-            android:drawableLeft="@drawable/ic_baseline_search_24"/>
+            android:paddingVertical="5dp" />
 
-        <LinearLayout
+<!--        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -49,11 +51,11 @@
                 android:gravity="end"
                 android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:background="@drawable/ic_baseline_keyboard_arrow_right_24" />
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_check_square_solid"/>
             </LinearLayout>
 
             <LinearLayout
@@ -84,7 +86,12 @@
                     android:textSize="12dp"
                     android:textColor="@color/dark"/>
             </LinearLayout>
-        </LinearLayout>
+        </LinearLayout>-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 
         <Button
             android:id="@+id/login"
