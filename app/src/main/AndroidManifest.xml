@@ -12,7 +12,6 @@
         android:roundIcon="@mipmap/railway_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.SriLankaRailwayDigital">
-        <activity android:name=".Ticket_check"></activity>
         <activity android:name=".Qr_scanner" />
         <activity android:name=".before_admin_gif" />
         <activity android:name=".CreateUser" />

@@ -5,7 +5,9 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +21,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class AdminHome extends Fragment {
 
-    FirebaseFirestore firebaseFirestore;
+    //FirebaseFirestore firebaseFirestore;
     Button button;
     Button btnCheck;
 
@@ -31,17 +33,14 @@ public class AdminHome extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment_admin_home, container, false);
 
-        //firbase
 
-        firebaseFirestore = FirebaseFirestore.getInstance();
-        //----------------------------
         button = v.findViewById(R.id.button5);
         btnCheck = v.findViewById(R.id.btnCheck);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),before_admin_gif.class);
+                Intent intent = new Intent(getActivity(),Qr_scanner.class);
                 startActivity(intent);
             }
         });
@@ -50,17 +49,12 @@ public class AdminHome extends Fragment {
         btnCheck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Cheking c = new Cheking();
-                c.setId("ak123");
-                c.setNote("lsjnfgdslfjldsjl nmflsdjfg");
+               CheckedTickets fragment = new CheckedTickets();
+                FragmentTransaction tra = getFragmentManager().beginTransaction();
+                tra.replace(R.id.checking_default, fragment);
+                Log.i("TAGPASS","test pass");
+                tra.commit();
 
-                DocumentReference documentReference = firebaseFirestore.collection("Ckeking").document("1");
-                documentReference.set(c).addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        Toast.makeText(getContext(),"success",Toast.LENGTH_LONG).show();
-                    }
-                });
             }
         });
         return v;
