@@ -2,6 +2,25 @@
     <string name="app_name">Sri Lanka Railway Digital</string>
     <string name="title">Sri Lanka Railway</string>
     <string name="home">HOME</string>
+
+    <string-array name="Schedule_From">
+        <item>Colombo Fort</item>
+        <item>Maradana</item>
+        <item>Ragama</item>
+    </string-array>
+
+    <string-array name="Schedule_To">
+        <item>Colombo Fort</item>
+        <item>Maradana</item>
+        <item>Ragama</item>
+    </string-array>
+
+    <string-array name="Schedule_date">
+        <item>2021-03-10</item>
+        <item>2021-03-06</item>
+        <item>2021-03-12</item>
+    </string-array>
+
     <string name="schedule">TIME SCHEDULE</string>
     <string name="about">The Sri Lanka Railway Department is Sri Lanka\'s railway owner and primary operator. As part of the Sri Lankan government, it is overseen by the Ministry of Transport.</string>
     <string name="team">Bug Apocalypse Development Team</string>

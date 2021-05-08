@@ -27,8 +27,8 @@
             android:layout_width="315dp"
             android:layout_height="55dp"
             android:layout_marginTop="8dp"
-            android:backgroundTint="@null"
             android:background="@drawable/header_bg"
+            android:backgroundTint="@null"
             android:drawableLeft="@drawable/logo_80"
             android:fontFamily="@font/bold"
             android:gravity="end"
@@ -67,12 +67,13 @@
             android:textSize="14dp" />
 
         <Spinner
-            android:id="@+id/spnmonth"
+            android:id="@+id/spnfrom"
             android:layout_width="315dp"
             android:layout_height="35dp"
             android:layout_marginTop="4dp"
             android:background="@drawable/secondary_spinner"
-            android:entries="@array/stations"
+            android:entries="@array/Schedule_From"
+            android:prompt="@string/home"
             android:padding="5dp" />
 
 
@@ -88,12 +89,13 @@
             android:textSize="14dp" />
 
         <Spinner
-            android:id="@+id/spnstto"
+            android:id="@+id/spnsto"
             android:layout_width="315dp"
             android:layout_height="35dp"
             android:layout_marginTop="4dp"
             android:background="@drawable/secondary_spinner"
-            android:entries="@array/stations"
+            android:entries="@array/Schedule_To"
+            android:prompt="@string/home"
             android:padding="5dp" />
 
         <TextView
@@ -105,7 +107,17 @@
             android:paddingLeft="12dp"
             android:text="DATE"
             android:textColor="@color/gray_light"
-            android:textSize="14dp"/>
+            android:textSize="14dp" />
+
+        <Spinner
+            android:id="@+id/spnsdate"
+            android:layout_width="315dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/secondary_spinner"
+            android:entries="@array/Schedule_date"
+            android:prompt="@string/home"
+            android:padding="5dp" />
 
         <LinearLayout
             android:layout_width="315dp"
@@ -117,6 +129,7 @@
                 android:id="@+id/btnfind"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/primary_button"
                 android:fontFamily="@font/regular"
@@ -128,12 +141,14 @@
                 android:id="@+id/btnclear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/secondary_button"
                 android:fontFamily="@font/regular"
                 android:gravity="center"
                 android:text="CLEAR"
-                android:textColor="@color/yellow"
+                android:textColor="@color/dark"
                 android:textSize="20dp" />
         </LinearLayout>
     </LinearLayout>
+
 </FrameLayout>
