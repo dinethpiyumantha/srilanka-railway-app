@@ -26,10 +26,197 @@
     <string name="team">Bug Apocalypse Development Team</string>
 
     <string-array name="stations">
+        <item>Ahangama</item>
+        <item>Ahungalle</item>
+        <item>Alawwa</item>
+        <item>Aluthgama</item>
+        <item>Ambalangoda</item>
+        <item>Ambanpola</item>
+        <item>Ambepussa</item>
+        <item>Ambewela</item>
+        <item>Angulana</item>
+        <item>Anuradhapura</item>
+        <item>Badulla</item>
+        <item>Balapitiya</item>
+        <item>Babarenda</item>
+        <item>Bambalapitiya</item>
+        <item>Bandarawela</item>
+        <item>Bangadeniya</item>
+        <item>Batticaloa</item>
+        <item>Batuwatta</item>
+        <item>Bemmulla</item>
+        <item>Beliatta</item>
+        <item>Bentota</item>
+        <item>Beruwala</item>
+        <item>Boossa</item>
+        <item>Bothale</item>
+        <item>Bulugahoda</item>
+        <item>Batuwatta Railway Station</item>
+        <item>Chavakachcheri</item>
+        <item>Chenkaladi</item>
+        <item>Chilaw</item>
+        <item>Chunnakam</item>
         <item>Colombo Fort</item>
+        <item>Colombo</item>
+        <item>Dematagoda</item>
+        <item>Daraluwa</item>
+        <item>Dehiwala</item>
+        <item>Demodara</item>
+        <item>Diyatalawa</item>
+        <item>Egoda Uyana</item>
+        <item>Elephant Pass</item>
+        <item>Eluthumadduval</item>
+        <item>Enderamulla</item>
+        <item>Free Trade Zone</item>
+        <item>Galle</item>
+        <item>Gampaha</item>
+        <item>Gampola</item>
+        <item>Ganemulla</item>
+        <item>Ganewatta</item>
+        <item>Gintota</item>
+        <item>Habaraduwa</item>
+        <item>Habarane</item>
+        <item>Halawatha</item>
+        <item>Hali Ela</item>
+        <item>Haputale</item>
+        <item>Hatton</item>
+        <item>Hettimulla</item>
+        <item>Hikkaduwa</item>
+        <item>Hindeniya-Pattigoda</item>
+        <item>Horape</item>
+        <item>Hunupitiya</item>
+        <item>Idalgashinna</item>
+        <item>Induruwa</item>
+        <item>Inuvil</item>
+        <item>Ja-Ela</item>
+        <item>Jaffna</item>
+        <item>Kahawa</item>
+        <item>Kalutara North</item>
+        <item>Kalutara South</item>
+        <item>Kamburugamuwa</item>
+        <item>Kandana</item>
+        <item>Kandy</item>
+        <item>Kankesanthurai</item>
+        <item>Kantalai</item>
+        <item>Kapuwatte</item>
+        <item>Kataragama</item>
+        <item>Kathaluwa</item>
+        <item>Katugoda</item>
+        <item>Katukurunda</item>
+        <item>Katunayake railway station</item>
+        <item>Katunayake Airport (BIA)</item>
+        <item>Keenawala</item>
+        <item>Kekanadura</item>
+        <item>Kekirawa</item>
+        <item>Kelaniya</item>
+        <item>Kilinochchi</item>
+        <item>Kinigama</item>
+        <item>Kodikamamam</item>
+        <item>Koggala</item>
+        <item>Kokgala</item>
+        <item>Kookuvil</item>
+        <item>Kollupitiya</item>
+        <item>Kondavil</item>
+        <item>Koralawella</item>
+        <item>Kosgoda</item>
+        <item>Kotugoda</item>
+        <item>Kudahakapola</item>
+        <item>Kurunegala</item>
+        <item>Liyanagemulla</item>
+        <item>Lunawa</item>
+        <item>Lunuwila</item>
+        <item>Magalegoda</item>
+        <item>Maggona</item>
+        <item>Maharagama</item>
+        <item>Maho</item>
+        <item>Mallakam</item>
+        <item>Mankulam</item>
+        <item>Mannar</item>
         <item>Maradana</item>
+        <item>Matale</item>
+        <item>Matara</item>
+        <item>Maviddapuram</item>
+        <item>Medawachchiya</item>
+        <item>Meesalai</item>
+        <item>Mirigama</item>
+        <item>Mirissa</item>
+        <item>Mirusuvil</item>
+        <item>Moratuwa</item>
+        <item>Mount Lavinia</item>
+        <item>Murikandy</item>
+        <item>Murikandy Temple</item>
+        <item>Maho junction railway station</item>
+        <item>Naththandiya</item>
+        <item>Navatkuly</item>
+        <item>Negombo</item>
+        <item>Nugegoda</item>
+        <item>Nanu Oya</item>
+        <item>Nawalapitiya</item>
+        <item>Ohiya</item>
+        <item>Omanthai</item>
+        <item>Padukka</item>
+        <item>Palai</item>
+        <item>Pallewela</item>
+        <item>Paranthan</item>
+        <item>Pattipola</item>
+        <item>Payagala North</item>
+        <item>Payagala South</item>
+        <item>Peradeniya Junction</item>
+        <item>Perelman day</item>
+        <item>Piladuwa</item>
+        <item>Pilimathalawa</item>
+        <item>Pinwatta</item>
+        <item>Polgahawela Junction</item>
+        <item>Polwathumodara</item>
+        <item>Puliyahkulam</item>
+        <item>Punkankulam</item>
+        <item>Puttalam</item>
+        <item>Polgahawela Junction</item>
         <item>Ragama</item>
+        <item>Rambukkana</item>
+        <item>Rathmalane</item>
+        <item>Richmond Hill</item>
+        <item>Radella</item>
+        <item>Rozella</item>
+        <item>Ragama Railway Station At Night</item>
+        <item>Sankathanai</item>
+        <item>Sarasavi Uyana</item>
+        <item>Seeduwa</item>
+        <item>Slave Island</item>
+        <item>Talaimannar</item>
+        <item>Talpe</item>
+        <item>Tellipalai</item>
+        <item>Thachanthoppu</item>
+        <item>Telwatte</item>
+        <item>Thandikulam</item>
+        <item>Trincomalee</item>
+        <item>Thambutthegama</item>
+        <item>Thembiligala</item>
+        <item>Ukuwela - Central Province</item>
+        <item>Unawatuna</item>
+        <item>Ulapane</item>
+        <item>Valaichchenai</item>
+        <item>Vavuniya</item>
+        <item>Veyangoda</item>
+        <item>Wadduwa</item>
+        <item>Walpola</item>
+        <item>Wanawasala</item>
+        <item>Wandurawa</item>
+        <item>Wattegama - Central Province</item>
+        <item>Weligama</item>
+        <item>Wellawatta</item>
+        <item>Wijayarajadahana</item>
+        <item>Wavurukannala</item>
+        <item>Yagoda</item>
+        <item>Yaththalgoda</item>
     </string-array>
+
+    <string-array name="classes">
+        <item>Class 1</item>
+        <item>Class 2</item>
+        <item>Class 3</item>
+    </string-array>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="lbl_my_reminders">MY REMINDERS</string>
     <string name="lbl_reminder">Reminder</string>
@@ -79,5 +266,40 @@
     <string name="btn_confirm">Confirm</string>
     <string name="btnview">View</string>
     <string name="lblview_ticket">View Ticket</string>
+
+    <string name="welcome">Welcome to ticket checking admin panel</string>
+    <string name="Login">Login</string>
+    <string name="Register">REGISTER</string>
+    <string name="checkTicket">Check Ticket</string>
+    <string name="checked">Checked Ticket</string>
+    <string name="today">today checked report</string>
+    <string name="Scanning">Scanning.............</string>
+    <string name="textview">TextView</string>
+
+
+    <string name="btnbook">BOOK NOW</string>
+    <string name="btnNext">NEXT</string>
+    <string name="qty_required">Ticket quantity is required.</string>
+    <string name="channel_name">Notification</string>
+    <string name="channel_description">Notification Description</string>
+    <string-array name="train_array">
+        <item>Udarata Menike\n(10:30 - 11:30)</item>
+        <item>Podi Menike\n(10:30 - 11:30)</item>
+        <item>Tikiri Menike\n(10:30 - 11:30)</item>
+        <item>Senkadagala Menike\n(10:30 - 11:30)</item>
+        <item>Yal Devi\n(10:30 - 11:30)</item>
+        <item>Uttara Devi\n(10:30 - 11:30)</item>
+        <item>Udaya Devi\n(10:30 - 11:30)</item>
+        <item>Rajarata Rejini\n(10:30 - 11:30)</item>
+        <item>Ruhunu Kumari\n(10:30 - 11:30)</item>
+        <item>Muthu Kumari\n(10:30 - 11:30)</item>
+        <item>Samudra Devi\n(10:30 - 11:30)</item>
+        <item>Galu Kumari\n(10:30 - 11:30)</item>
+        <item>Sagarika\n(10:30 - 11:30)</item>
+        <item>Sri Devi\n(10:30 - 11:30)</item>
+        <item>Meena Gaya\n(10:30 - 11:30)</item>
+        <item>Deyata Kirula\n(10:30 - 11:30)</item>
+        <item>Denuwara Manike\n(10:30 - 11:30)</item>
+    </string-array>
 
 </resources>

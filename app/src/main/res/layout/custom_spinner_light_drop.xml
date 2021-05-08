@@ -2,10 +2,10 @@
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:text="Value"
+    android:background="@drawable/spinner_item_bg"
     android:padding="10dp"
-    android:textSize="14dp"
-
-    android:textColor="@color/dark">
+    android:text="Value"
+    android:textColor="@color/dark"
+    android:textSize="14dp">
 
 </TextView>

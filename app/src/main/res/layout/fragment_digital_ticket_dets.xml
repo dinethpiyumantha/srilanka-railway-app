@@ -182,7 +182,7 @@
        </LinearLayout>
 
        <Button
-           android:id="@+id/btnclear"
+           android:id="@+id/logout1"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_gravity="center_horizontal"
@@ -191,7 +191,7 @@
            android:fontFamily="@font/regular"
            android:gravity="center"
            android:text="BACK"
-           android:textColor="@color/yellow"
+           android:textColor="@color/dark"
            android:textSize="20dp"/>
 
    </LinearLayout>

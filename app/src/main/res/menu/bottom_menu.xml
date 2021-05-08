@@ -3,22 +3,22 @@
 
     <item
         android:id="@+id/menuhome"
-        android:title="Item"
+        android:title="Home"
         android:icon="@drawable/ic_home" />
     <item
         android:id="@+id/menutime"
-        android:title="Item"
+        android:title="Reminders"
         android:icon="@drawable/ic_clock"/>
     <item
         android:id="@+id/menuticket"
-        android:title="Item"
+        android:title="Ticket"
         android:icon="@drawable/ic_ticket_alt"/>
     <item
         android:id="@+id/menucheck"
-        android:title="Item"
+        android:title="QR"
         android:icon="@drawable/ic_qrcode"/>
     <item
         android:id="@+id/menuuser"
-        android:title="Item"
+        android:title="Profile"
         android:icon="@drawable/ic_user"/>
 </menu>

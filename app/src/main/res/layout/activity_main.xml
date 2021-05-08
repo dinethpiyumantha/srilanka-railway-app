@@ -18,7 +18,9 @@
         android:background="@color/yellow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:itemIconTint="@drawable/nav_home"
         app:layout_constraintStart_toStartOf="parent"
+        app:labelVisibilityMode="unlabeled"
         app:menu="@menu/bottom_menu" />
 
     <fragment

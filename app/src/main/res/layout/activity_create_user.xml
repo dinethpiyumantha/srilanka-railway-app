@@ -23,108 +23,115 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/bold"
-            android:text="User Login"
+            android:text="Create User"
             android:textAllCaps="true"
             android:textColor="@color/gray_light"
             android:textSize="20dp" />
 
         <EditText
+            android:id="@+id/Username"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
+            android:backgroundTint="@color/yellow"
+            android:fontFamily="@font/bold"
+            android:gravity="center_horizontal"
             android:hint="USERNAME"
-            android:fontFamily="@font/bold"
-            android:textColor="@color/gray_light"
-            android:textSize="16dp"
-            android:textColorHint="@color/yellow"
             android:textAlignment="center"
-            android:backgroundTint="@color/yellow"
-            android:gravity="center_horizontal" />
+            android:textColor="@color/gray_light"
+            android:textColorHint="@color/yellow"
+            android:textSize="16dp" />
 
         <EditText
+            android:id="@+id/fullName"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:backgroundTint="@color/yellow"
+            android:fontFamily="@font/bold"
+            android:gravity="center_horizontal"
             android:hint="FULL NAME"
-            android:fontFamily="@font/bold"
-            android:textColor="@color/gray_light"
-            android:textSize="16dp"
-            android:textColorHint="@color/yellow"
             android:textAlignment="center"
-            android:backgroundTint="@color/yellow"
-            android:gravity="center_horizontal" />
+            android:textColor="@color/gray_light"
+            android:textColorHint="@color/yellow"
+            android:textSize="16dp" />
 
         <EditText
+            android:id="@+id/nic"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:backgroundTint="@color/yellow"
+            android:fontFamily="@font/bold"
+            android:gravity="center_horizontal"
             android:hint="NIC"
-            android:fontFamily="@font/bold"
-            android:textColor="@color/gray_light"
-            android:textSize="16dp"
-            android:textColorHint="@color/yellow"
             android:textAlignment="center"
-            android:backgroundTint="@color/yellow"
-            android:gravity="center_horizontal" />
+            android:textColor="@color/gray_light"
+            android:textColorHint="@color/yellow"
+            android:textSize="16dp" />
 
         <EditText
+            android:id="@+id/email"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:inputType="textEmailAddress"
+            android:backgroundTint="@color/yellow"
+            android:fontFamily="@font/bold"
+            android:gravity="center_horizontal"
             android:hint="EMAIL"
-            android:fontFamily="@font/bold"
-            android:textColor="@color/gray_light"
-            android:textSize="16dp"
-            android:textColorHint="@color/yellow"
+            android:inputType="textEmailAddress"
             android:textAlignment="center"
-            android:backgroundTint="@color/yellow"
-            android:gravity="center_horizontal" />
+            android:textColor="@color/gray_light"
+            android:textColorHint="@color/yellow"
+            android:textSize="16dp" />
 
         <EditText
+            android:id="@+id/phone"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:inputType="phone"
             android:layout_marginTop="10dp"
+            android:backgroundTint="@color/yellow"
+            android:fontFamily="@font/bold"
+            android:gravity="center_horizontal"
             android:hint="PHONE"
-            android:fontFamily="@font/bold"
-            android:textColor="@color/gray_light"
-            android:textSize="16dp"
-            android:textColorHint="@color/yellow"
+            android:inputType="phone"
             android:textAlignment="center"
-            android:backgroundTint="@color/yellow"
-            android:gravity="center_horizontal" />
+            android:textColor="@color/gray_light"
+            android:textColorHint="@color/yellow"
+            android:textSize="16dp" />
 
         <EditText
+            android:id="@+id/password"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:inputType="textPassword"
+            android:backgroundTint="@color/yellow"
+            android:fontFamily="@font/bold"
+            android:gravity="center_horizontal"
             android:hint="PASSWORD"
-            android:fontFamily="@font/bold"
-            android:textColor="@color/gray_light"
-            android:textSize="16dp"
-            android:textColorHint="@color/yellow"
+            android:inputType="textPassword"
             android:textAlignment="center"
-            android:backgroundTint="@color/yellow"
-            android:gravity="center_horizontal" />
+            android:textColor="@color/gray_light"
+            android:textColorHint="@color/yellow"
+            android:textSize="16dp" />
 
         <EditText
+            android:id="@+id/Repassword"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:inputType="textPassword"
-            android:hint="CONFIRM PASSWORD"
-            android:fontFamily="@font/bold"
-            android:textColor="@color/gray_light"
-            android:textSize="16dp"
-            android:textColorHint="@color/yellow"
-            android:textAlignment="center"
             android:backgroundTint="@color/yellow"
-            android:gravity="center_horizontal" />
+            android:fontFamily="@font/bold"
+            android:gravity="center_horizontal"
+            android:hint="CONFIRM PASSWORD"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColor="@color/gray_light"
+            android:textColorHint="@color/yellow"
+            android:textSize="16dp" />
 
         <Button
-            android:id="@+id/btnfind"
+            android:id="@+id/login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -134,12 +141,12 @@
             android:textColor="@color/dark"
             android:textSize="20dp"
             app:layout_constraintBottom_toTopOf="@+id/vmenu"
-            app:layout_constraintEnd_toStartOf="@+id/btnclear"
+            app:layout_constraintEnd_toStartOf="@+id/logout1"
             app:layout_constraintHorizontal_bias="0.347"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/btnclear"
+            android:id="@+id/logout1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"

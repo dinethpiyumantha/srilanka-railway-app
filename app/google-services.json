@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "798289157849",
+    "project_id": "sri-lanka-railway-digita-3bedf",
+    "storage_bucket": "sri-lanka-railway-digita-3bedf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798289157849:android:3b099d469a60f1468568c8",
+        "android_client_info": {
+          "package_name": "com.bugapocalypse.srilankarailwaydigital"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "798289157849-1k8fuq0ja69108d98vrq6snr10ksjavb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzLF94ZBpn7YpeoLJrXbNdtf2m_aAoBeM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "798289157849-1k8fuq0ja69108d98vrq6snr10ksjavb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
