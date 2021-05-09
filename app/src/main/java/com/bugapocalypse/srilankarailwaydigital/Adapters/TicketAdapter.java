@@ -1,11 +1,15 @@
 package com.bugapocalypse.srilankarailwaydigital.Adapters;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -35,12 +39,15 @@ public class TicketAdapter extends RecyclerView.Adapter<TicketAdapter.TicketView
     public TicketViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(context).inflate(R.layout.ticket_item, parent, false);
 
+
+
         v.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.i("SAMPLE", "===========>>>  CLICKED !!!!!!!!");
             }
         });
+
         return new TicketViewHolder(v, mOnTicketListener);
     }
 
@@ -52,6 +59,8 @@ public class TicketAdapter extends RecyclerView.Adapter<TicketAdapter.TicketView
         holder.date.setText(ticket.getDate());
         holder.time.setText(ticket.getTime());
         holder.price.setText("LKR " + ticket.getPrice());
+
+
     }
 
     @Override
@@ -62,6 +71,7 @@ public class TicketAdapter extends RecyclerView.Adapter<TicketAdapter.TicketView
     public static class TicketViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         TextView trainName, fromTo, date, time, price;
+        ImageButton btnDelete;
         OnTicketListener onTicketListener;
 
 
@@ -72,19 +82,31 @@ public class TicketAdapter extends RecyclerView.Adapter<TicketAdapter.TicketView
             date = itemView.findViewById(R.id.date);
             time = itemView.findViewById(R.id.time);
             price = itemView.findViewById(R.id.price);
+            btnDelete = itemView.findViewById(R.id.btnDeleteItem);
 
             this.onTicketListener = onTicketListener;
 
             itemView.setOnClickListener(this);
+
+            btnDelete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onTicketListener.onTicketDelete(getAdapterPosition(), list.get(getAdapterPosition()));
+                }
+            });
+
         }
 
         @Override
         public void onClick(View v) {
             onTicketListener.onTicketClick(getAdapterPosition(), list.get(getAdapterPosition()));
         }
+
+
     }
 
     public interface OnTicketListener {
         void onTicketClick(int position, Ticket ticket);
+        void onTicketDelete(int position, Ticket ticket);
     }
 }

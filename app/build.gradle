@@ -64,4 +64,6 @@ dependencies {
     // QR Code
     implementation 'com.journeyapps:zxing-android-embedded:3.4.0'
 
+    implementation 'com.google.firebase:firebase-storage:19.2.2'
+
 }

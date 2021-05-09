@@ -171,7 +171,16 @@ public class TicketFormStation extends Fragment implements AdapterView.OnItemSel
                     documentReference.set(ticket).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
-
+//                            AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
+//                            alertDialog.setTitle("Alert");
+//                            alertDialog.setMessage("Alert message to be shown");
+//                            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+//                                    new DialogInterface.OnClickListener() {
+//                                        public void onClick(DialogInterface dialog, int which) {
+//                                            dialog.dismiss();
+//                                        }
+//                                    });
+//                            alertDialog.show();
                         }
                     });
 
