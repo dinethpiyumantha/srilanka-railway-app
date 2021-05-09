@@ -86,14 +86,14 @@ public class MyReminders extends Fragment implements RemindersAdapter.OnTimeList
         firestore = FirebaseFirestore.getInstance(); //Realtime DB instance initialization
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
-        // Set tickets to recycler view
+        // Set Reminders to recycler view
         list = new ArrayList<>();
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         remindersAdapter = new RemindersAdapter(getContext(), list, this);
         recyclerView.setAdapter(remindersAdapter);
 
-        // Getting Ticket Documents from fire store and add to the list
+        // Getting Reminders Documents from fire store and add to the list
         firestore.collection("Shedules")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -117,7 +117,7 @@ public class MyReminders extends Fragment implements RemindersAdapter.OnTimeList
                         }
                     }
                 });
-        // Getting Ticket from realtime db and add to the list
+        // Getting Reminders from realtime db and add to the list
 //        dbRef.addValueEventListener(new ValueEventListener() {
 //            @Override
 //            public void onDataChange(@NonNull DataSnapshot snapshot) {
