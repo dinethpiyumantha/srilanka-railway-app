@@ -68,7 +68,7 @@ public class PopupDialog extends DialogFragment {
             e.printStackTrace();
         }
 
-        imgPoster = view.findViewById(R.id.imgP);
+        imgPoster = view.findViewById(R.id.imgPoster);
         return inflater.inflate(R.layout.popup_main, container, false);
     }
 
