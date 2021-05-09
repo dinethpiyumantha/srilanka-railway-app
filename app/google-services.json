@@ -3,6 +3,7 @@
     "project_number": "798289157849",
     "project_id": "sri-lanka-railway-digita-3bedf",
     "storage_bucket": "sri-lanka-railway-digita-3bedf.appspot.com"
+
   },
   "client": [
     {
@@ -21,13 +22,16 @@
       "api_key": [
         {
           "current_key": "AIzaSyCzLF94ZBpn7YpeoLJrXbNdtf2m_aAoBeM"
+
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
+
               "client_id": "798289157849-1k8fuq0ja69108d98vrq6snr10ksjavb.apps.googleusercontent.com",
+
               "client_type": 3
             }
           ]
