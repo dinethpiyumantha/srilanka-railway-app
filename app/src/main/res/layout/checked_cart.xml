@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/checked_cart"
+    app:background="@color/dark"
+    app:backgroundTint="@color/dark"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_ticket_check_bg"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_check_square_solid" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dateAndTimeCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:text="20-03-2021   10.15 AM"
+                android:textColor="@color/dark"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/trainNameCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bold"
+                android:text="Colombo Commuter"
+                android:textColor="@color/dark"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/ticketIdCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:text="ID - T0010031"
+                android:textColor="@color/dark"
+                android:textSize="12dp" />
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/btnDeleteItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="30dp"
+            android:background="@null"
+            android:src="@drawable/ic_baseline_delete_24"/>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>

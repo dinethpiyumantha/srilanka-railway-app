@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,17 +10,17 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_height="529dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
-        android:layout_gravity="center_horizontal">
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/htitle"
             android:layout_width="315dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/semibold"
-            android:text="@string/lbl_reminder"
+            android:text="REMINDER EDIT"
             android:textAllCaps="true"
             android:textColor="@color/gray_light"
             android:textSize="20dp" />
@@ -27,7 +28,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,6 +36,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/txtTime"
                 android:layout_width="315dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -44,15 +46,18 @@
                 android:textColor="@color/gray_light"
                 android:textSize="14dp" />
 
-            <Spinner
+            <Button
+                android:id="@+id/timeEdit"
                 android:layout_width="315dp"
                 android:layout_height="35dp"
                 android:layout_marginTop="4dp"
+                app:backgroundTint="@null"
                 android:background="@drawable/secondary_spinner"
                 android:entries="@array/stations"
                 android:padding="5dp" />
 
             <TextView
+                android:id="@+id/txtDate"
                 android:layout_width="315dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -62,15 +67,18 @@
                 android:textColor="@color/gray_light"
                 android:textSize="14dp" />
 
-            <Spinner
+            <Button
+                android:id="@+id/dateEdit"
                 android:layout_width="315dp"
                 android:layout_height="35dp"
                 android:layout_marginTop="4dp"
+                app:backgroundTint="@null"
                 android:background="@drawable/secondary_spinner"
                 android:entries="@array/stations"
                 android:padding="5dp" />
 
             <TextView
+                android:id="@+id/txtFrom"
                 android:layout_width="315dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -81,6 +89,7 @@
                 android:textSize="14dp" />
 
             <Spinner
+                android:id="@+id/fromEdit"
                 android:layout_width="315dp"
                 android:layout_height="35dp"
                 android:layout_marginTop="4dp"
@@ -89,6 +98,7 @@
                 android:padding="5dp" />
 
             <TextView
+                android:id="@+id/txtTo"
                 android:layout_width="315dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -99,6 +109,7 @@
                 android:textSize="14dp" />
 
             <Spinner
+                android:id="@+id/toEdit"
                 android:layout_width="315dp"
                 android:layout_height="35dp"
                 android:layout_marginTop="4dp"
@@ -116,13 +127,13 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/Reset_password"
+                android:id="@+id/btnApply"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/primary_button"
                 android:fontFamily="@font/regular"
-                android:text="FIND"
+                android:text="APPLY"
                 android:textColor="@color/dark"
                 android:textSize="20dp" />
 
@@ -135,9 +146,23 @@
                 app:backgroundTint="@null"
                 android:gravity="center"
                 android:text="CLEAR"
-                android:textColor="@color/yellow"
+                android:textColor="@color/dark"
                 android:textSize="20dp" />
         </LinearLayout>
+
+        <Button
+            android:id="@+id/btnback3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/secondary_button"
+            android:fontFamily="@font/regular"
+            android:gravity="center"
+            android:text="BACK"
+            android:textColor="@color/yellow"
+            android:textSize="20dp"
+            app:backgroundTint="@null" />
 
     </LinearLayout>
 

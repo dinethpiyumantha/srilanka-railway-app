@@ -146,7 +146,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/Reset_password"
+                    android:id="@+id/btnBook"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
@@ -157,7 +157,7 @@
                     android:textSize="20dp" />
 
                 <Button
-                    android:id="@+id/saveBtn"
+                    android:id="@+id/btnCancel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"

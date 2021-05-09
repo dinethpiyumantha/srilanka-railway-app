@@ -1,33 +1,37 @@
 {
   "project_info": {
-    "project_number": "103468151038",
-    "project_id": "madproject-296bd",
-    "storage_bucket": "madproject-296bd.appspot.com"
+    "project_number": "798289157849",
+    "project_id": "sri-lanka-railway-digita-3bedf",
+    "storage_bucket": "sri-lanka-railway-digita-3bedf.appspot.com"
+
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:103468151038:android:b5669c757af179184db5af",
+        "mobilesdk_app_id": "1:798289157849:android:3b099d469a60f1468568c8",
         "android_client_info": {
           "package_name": "com.bugapocalypse.srilankarailwaydigital"
         }
       },
       "oauth_client": [
         {
-          "client_id": "103468151038-kg7kgrh27jd0v0c703dejr9k76l9u3ks.apps.googleusercontent.com",
+          "client_id": "798289157849-1k8fuq0ja69108d98vrq6snr10ksjavb.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBQSSv5fKMGF3wtz0TIMlqf1yBurZ8FNd4"
+          "current_key": "AIzaSyCzLF94ZBpn7YpeoLJrXbNdtf2m_aAoBeM"
+
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "103468151038-kg7kgrh27jd0v0c703dejr9k76l9u3ks.apps.googleusercontent.com",
+
+              "client_id": "798289157849-1k8fuq0ja69108d98vrq6snr10ksjavb.apps.googleusercontent.com",
+
               "client_type": 3
             }
           ]

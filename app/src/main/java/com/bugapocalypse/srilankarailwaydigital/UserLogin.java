@@ -25,7 +25,7 @@ public class UserLogin extends AppCompatActivity {
     EditText email,PasswordL;
     Button login;
     TextView CreatBtn,ResetPasswordBtn;
-   // ProgressBar progressBar;
+    // ProgressBar progressBar;
     FirebaseAuth auth;
 
     @Override
@@ -64,14 +64,13 @@ public class UserLogin extends AppCompatActivity {
                             Toast.makeText(UserLogin.this, "Login SuccessFully", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         } else {
-                            Toast.makeText(UserLogin.this, "Error"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UserLogin.this, "Error" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
 
 
                         }
 
                     }
-
-            });
+                });
             }
         });
 

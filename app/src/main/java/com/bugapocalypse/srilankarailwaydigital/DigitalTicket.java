@@ -66,7 +66,8 @@ public class DigitalTicket extends AppCompatActivity {
 //        ==========================================
 
         // Creating String Code
-        String codeString = ticket.getId() + "," +
+        String codeString = ticket.getId();
+       /* + "," +
                 ticket.getUserId() + "," +
                 ticket.getFrom() + "," +
                 ticket.getTo() + "," +
@@ -74,7 +75,7 @@ public class DigitalTicket extends AppCompatActivity {
                 ticket.getDate() + "," +
                 ticket.getTrclass() + "," +
                 ticket.getTrain() + "," +
-                ticket.getQty();
+                ticket.getQty();*/
 
         // Generate QR Code and Convert it to Bitmap
         MultiFormatWriter writer = new MultiFormatWriter();

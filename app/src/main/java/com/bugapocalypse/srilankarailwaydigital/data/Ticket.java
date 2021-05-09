@@ -19,10 +19,12 @@ public class Ticket implements Parcelable {
     private String train;
     private String price;
     private String approve;
+    private String note;
 
     // Constructor
     public Ticket() {
         approve = "0";
+        note = " ";
     }
 
     // Constructor for create a parcel
@@ -38,6 +40,7 @@ public class Ticket implements Parcelable {
         train = in.readString();
         price = in.readString();
         approve = in.readString();
+        note = in.readString();
     }
 
     public static final Creator<Ticket> CREATOR = new Creator<Ticket>() {
@@ -141,6 +144,14 @@ public class Ticket implements Parcelable {
         this.train = train;
     }
 
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -159,5 +170,6 @@ public class Ticket implements Parcelable {
         dest.writeString(train);
         dest.writeString(price);
         dest.writeString(approve);
+        dest.writeString(note);
     }
 }
