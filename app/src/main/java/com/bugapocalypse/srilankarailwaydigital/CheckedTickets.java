@@ -34,15 +34,11 @@ public class CheckedTickets extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
         View view = inflater.inflate(R.layout.fragment_checked_tickets, container, false);
-
         //recycle id
         recyclerView = view.findViewById(R.id.recycleView);
-
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        //chekedAdapter = new CheckedAdapter(getCont)
         chekedAdapter = new CheckedAdapter(getContext(), list1,this);
         recyclerView.setAdapter(chekedAdapter);
         Log.d("CHEK","Line 48");
@@ -51,11 +47,9 @@ public class CheckedTickets extends Fragment {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 //Log.d("CHEK","set Array list to data line 52");
-
                 if (task.isSuccessful()) {
                     for (QueryDocumentSnapshot document : task.getResult()) {
                         //Log.d("CHEK","set Array list to data line 56");
-
                         String documentId = document.getId();
                         Cheking cheking = new Cheking();
                         cheking.setDocumentId(documentId);

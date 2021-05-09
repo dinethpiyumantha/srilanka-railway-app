@@ -39,33 +39,27 @@ public class CheckedAdapter extends RecyclerView.Adapter<CheckedAdapter.CheckedA
         firebaseFirestore = FirebaseFirestore.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
     }
-
     @NonNull
     @Override
     public CheckedAdapterHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        //View v = LayoutInflater.from(context).inflate(R.layout.checked_cart, parent, false);
-        //return new CheckedAdapterHolder(v, mOnTicketListener);
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.checked_cart, parent, false);
-
         CheckedAdapterHolder viewHolder = new CheckedAdapterHolder(view);
-
         return viewHolder;
     }
-
     @Override
     public void onBindViewHolder(@NonNull CheckedAdapter.CheckedAdapterHolder holder,int position) {
-        Log.d("CA","OnBind position = " + position);
         Cheking cheking = chekings.get(position);
         holder.dateAndTime.setText(cheking.getTime());
         holder.train.setText(cheking.getTrain());
         holder.ticketId.setText(cheking.getTicketIdcheak());
-
-
-
+        //delete from database
         holder.delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                firebaseFirestore.getInstance().collection("checking").document(chekings.get(position).getTicketIdcheak()).delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+                firebaseFirestore.getInstance().collection("checking").document(chekings.get(position)
+                        .getTicketIdcheak())
+                        .delete()
+                        .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()){
@@ -98,17 +92,8 @@ public class CheckedAdapter extends RecyclerView.Adapter<CheckedAdapter.CheckedA
             ticketId = itemView.findViewById(R.id.ticketIdCheck );
             delete = itemView.findViewById(R.id.btnDeleteItem );
 
-            final AlertDialog dialog = new AlertDialog.Builder(context.getApplicationContext())
-                    .setTitle("Title")
-                    .setMessage("Example Message")
-                    .setPositiveButton("Ok", null)
-                    .setNegativeButton("Cancel", null)
-                    .show();
-
-            Button positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
         }
     }
-
 /*    public void deleteItem(int position){
         firebaseFirestore.collection("checking").document(chekings.get(position).getTicketIdcheak())
                 .delete()
