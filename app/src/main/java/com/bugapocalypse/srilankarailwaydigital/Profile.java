@@ -142,28 +142,21 @@ public class Profile extends   Fragment {
                                      Toast.makeText(getActivity(), "Password Reset Successfully !", Toast.LENGTH_SHORT).show();
 
                                  }
-
                                 }).addOnFailureListener(new OnFailureListener() {
                                  @Override
                                  public void onFailure(@NonNull Exception e) {
                                      Toast.makeText(getActivity(), "Erroe !", Toast.LENGTH_SHORT).show();
                                  }
                              });
-
-
                             }
                         });
-
                         passwordReset.setNegativeButton("No", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-
                             }
                         });
                         passwordReset.create().show();
                     }
-
-
                 });
 
 
