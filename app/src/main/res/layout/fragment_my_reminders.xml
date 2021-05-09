@@ -80,14 +80,14 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/btnSetReminder"
+                android:id="@+id/btnSet"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="40dp"
                 android:background="@drawable/primary_button"
                 android:fontFamily="@font/regular"
-                android:text="SET REMINDER"
+                android:text="SET REMINDERS"
                 android:textColor="@color/dark"
                 android:textSize="20dp" />
         </LinearLayout>
