@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/dark"
     tools:context=".TicketNote">
 
@@ -218,6 +219,7 @@
                 android:layout_height="match_parent"
                 android:inputType="textMultiLine"
                 android:height="100dp"
+                android:textColor="@color/dark"
                 android:background="@drawable/search_edit"/>
 
             <LinearLayout
@@ -242,6 +244,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
+                    app:backgroundTint="@null"
                     android:background="@drawable/secondary_button"
                     android:fontFamily="@font/regular"
                     android:gravity="center"
