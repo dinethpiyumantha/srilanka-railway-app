@@ -115,7 +115,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/login"
+                android:id="@+id/Reset_password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
@@ -126,7 +126,7 @@
                 android:textSize="20dp" />
 
             <Button
-                android:id="@+id/logout1"
+                android:id="@+id/saveBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/secondary_button"
