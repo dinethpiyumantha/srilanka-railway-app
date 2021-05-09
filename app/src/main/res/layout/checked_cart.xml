@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/checked_cart"
+    app:background="@color/dark"
+    app:backgroundTint="@color/dark"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -58,6 +63,23 @@
                 android:textColor="@color/dark"
                 android:textSize="12dp" />
         </LinearLayout>
+        <ImageButton
+            android:id="@+id/btnDeleteItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="30dp"
+            android:background="@null"
+            android:src="@drawable/ic_baseline_delete_24"/>
     </LinearLayout>
 
-</LinearLayout>
+
+
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>
