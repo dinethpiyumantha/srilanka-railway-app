@@ -68,7 +68,8 @@ public class UpdateProfile extends AppCompatActivity {
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (userNameSave.getText().toString().isEmpty() || fullNameSave.getText().toString().isEmpty() || emailSave.getText().toString().isEmpty() || phoneSave.getText().toString().isEmpty()) {
+                if (userNameSave.getText().toString().isEmpty() || fullNameSave.getText().toString().isEmpty()
+                        || emailSave.getText().toString().isEmpty() || phoneSave.getText().toString().isEmpty()) {
                     Toast.makeText(UpdateProfile.this, "Fields Are Empty", Toast.LENGTH_SHORT).show();
                     return;
 
@@ -87,7 +88,7 @@ public class UpdateProfile extends AppCompatActivity {
                         documentReference.update(edit).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
-                                Toast.makeText(UpdateProfile.this, "save is done", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(UpdateProfile.this, "Done", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(getApplicationContext(),MainActivity.class));
                                 finish();
                             }
@@ -100,23 +101,8 @@ public class UpdateProfile extends AppCompatActivity {
                         Toast.makeText(UpdateProfile.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
-
             }
-
-
         });
-//        profilepic.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                //open glry
-//                Intent galleryOpen=new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-//                startActivityForResult(galleryOpen,1000);
-//
-//            }
-//
-//        });
-
-
         userNameSave.setText(userName);
         fullNameSave.setText(fulName);
         emailSave.setText(emails);
