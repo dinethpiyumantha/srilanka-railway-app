@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "103468151038",
+    "project_id": "madproject-296bd",
+    "storage_bucket": "madproject-296bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103468151038:android:b5669c757af179184db5af",
+        "android_client_info": {
+          "package_name": "com.bugapocalypse.srilankarailwaydigital"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103468151038-kg7kgrh27jd0v0c703dejr9k76l9u3ks.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQSSv5fKMGF3wtz0TIMlqf1yBurZ8FNd4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103468151038-kg7kgrh27jd0v0c703dejr9k76l9u3ks.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
