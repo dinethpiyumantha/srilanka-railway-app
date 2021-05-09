@@ -8,10 +8,10 @@
     tools:context=".CreateUser">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_width="330dp"
+        android:layout_height="610dp"
         android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -115,23 +115,8 @@
             android:textColorHint="@color/yellow"
             android:textSize="16dp" />
 
-        <EditText
-            android:id="@+id/Repassword"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="@color/yellow"
-            android:fontFamily="@font/bold"
-            android:gravity="center_horizontal"
-            android:hint="CONFIRM PASSWORD"
-            android:inputType="textPassword"
-            android:textAlignment="center"
-            android:textColor="@color/gray_light"
-            android:textColorHint="@color/yellow"
-            android:textSize="16dp" />
-
         <Button
-            android:id="@+id/login"
+            android:id="@+id/Reset_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -141,22 +126,22 @@
             android:textColor="@color/dark"
             android:textSize="20dp"
             app:layout_constraintBottom_toTopOf="@+id/vmenu"
-            app:layout_constraintEnd_toStartOf="@+id/logout1"
+            app:layout_constraintEnd_toStartOf="@+id/saveBtn"
             app:layout_constraintHorizontal_bias="0.347"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/logout1"
+            android:id="@+id/saveBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/secondary_button"
             android:fontFamily="@font/regular"
             android:gravity="center"
-            android:text="CANCEL"
-            android:textColor="@color/yellow"
+            android:text="LogIn"
+            android:textColor="@color/dark"
             android:textSize="20dp"
-            app:backgroundTint="@null"/>
+            app:backgroundTint="#FFC107" />
 
     </LinearLayout>
 
