@@ -6,11 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 //import com.bugapocalypse.srilankarailwaydigital.data.User;
@@ -19,15 +17,11 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import io.perfmark.Tag;
 
 public class CreateUser extends AppCompatActivity {
     public static final String TAG = "TAG";
@@ -53,7 +47,7 @@ public class CreateUser extends AppCompatActivity {
         Phone = (EditText) findViewById(R.id.phone);
         inputPassword = (EditText) findViewById(R.id.password);
         ReinputPassword = (EditText) findViewById(R.id.Repassword);
-        Creat = (Button) findViewById(R.id.login);
+        Creat = (Button) findViewById(R.id.btnfind);
         Cancel = (Button) findViewById(R.id.logout1);
        // progressBar = (ProgressBar) findViewById(R.id.progressBar);
 

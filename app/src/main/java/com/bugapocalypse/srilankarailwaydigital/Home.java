@@ -90,7 +90,7 @@ public class Home extends Fragment {
 //
 
 
-        btnTitle = v.findViewById(R.id.btnTitle);
+        btnTitle = view.findViewById(R.id.btnTitle);
         btnTitle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
