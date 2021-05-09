@@ -29,7 +29,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="286dp"
             android:orientation="vertical">
 
             <TextView
@@ -57,7 +57,7 @@
                     android:paddingLeft="12dp"
                     android:text="10 : 00 AM"
                     android:textColor="@color/dark"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp" />
 
                 <TextView
                     android:layout_width="315dp"
@@ -74,10 +74,23 @@
                     android:fontFamily="@font/regular"
                     android:paddingLeft="12dp"
                     android:text="Kandy to Ragama"
-                        android:textColor="@color/dark"
+                    android:textColor="@color/dark"
                     android:textSize="14dp" />
 
             </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSetReminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/primary_button"
+                android:fontFamily="@font/regular"
+                android:text="SET REMINDER"
+                android:textColor="@color/dark"
+                android:textSize="20dp" />
         </LinearLayout>
+
     </LinearLayout>
 </FrameLayout>
