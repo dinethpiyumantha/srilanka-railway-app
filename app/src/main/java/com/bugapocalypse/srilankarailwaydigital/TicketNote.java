@@ -52,7 +52,6 @@ public class TicketNote extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_ticket_note, container, false);
-
         ticketID = v.findViewById(R.id.ticketID);
         destination = v.findViewById(R.id.destination);
         trainNamee = v.findViewById(R.id.trainNamee);
@@ -64,10 +63,9 @@ public class TicketNote extends Fragment {
         emailnew = v.findViewById(R.id.emailnew);
         EditText note = v.findViewById(R.id.note);
         Button btn = v.findViewById(R.id.checkTicket);
+        String vall= getArguments().getString("id");
 
-       String vall= getArguments().getString("id");
-
-
+        //get data from database
         db.collection("Tickets")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -75,36 +73,30 @@ public class TicketNote extends Fragment {
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
-//                                Log.d("THISARA","IF ekata awa");
-                                //Log.d("THISARA", document.getId() + " <<< " + document.getData().getClass() + " >>> => " + document.getData());
                                 Ticket ticket = new Ticket();
                                 ticket.setId(document.getId());
-                                ticket.setDate(document.getData().get("date").toString());
-                                ticket.setApprove(document.getData().get("approve").toString());
-                                ticket.setQty(document.getData().get("qty").toString());
-                                ticket.setFrom(document.getData().get("from").toString());
-                                ticket.setTrclass(document.getData().get("trclass").toString());
-                                ticket.setTo(document.getData().get("to").toString());
-                                ticket.setTime(document.getData().get("time").toString());
-                                ticket.setUserId(document.getData().get("userId").toString());
-                                ticket.setTrain(document.getData().get("train").toString());
-                                ticket.setPrice(document.getData().get("price").toString());
-
+                                    ticket.setDate(document.getData().get("date").toString());
+                                    ticket.setApprove(document.getData().get("approve").toString());
+                                    ticket.setQty(document.getData().get("qty").toString());
+                                    ticket.setFrom(document.getData().get("from").toString());
+                                    ticket.setTrclass(document.getData().get("trclass").toString());
+                                    ticket.setTo(document.getData().get("to").toString());
+                                    ticket.setTime(document.getData().get("time").toString());
+                                    ticket.setUserId(document.getData().get("userId").toString());
+                                    ticket.setTrain(document.getData().get("train").toString());
+                                    ticket.setPrice(document.getData().get("price").toString());
+                                //set data ticket object
                                 if(ticket.getId().equals(vall)) {
-                                    //list.add(ticket);
-//                                    Log.d("THISARA","IF 2 awa");
-                                    ticketID.setText(ticket.getId());
-                                    ticketIDString = ticket.getId();
-                                    destination.setText(ticket.getFrom());
-                                    trainNamee.setText(ticket.getTrain());
-                                    classTrain.setText(ticket.getTrclass());
-                                    dateAndTime.setText(ticket.getDate()+" "+ticket.getTime());
-                                    userid =ticket.getUserId().toString();
-                                    dateAndTimeuser = ticket.getDate()+" "+ticket.getTime();
-                                    fromTrain = ticket.getFrom();
-                                    //note.setText(userid);
-                                    //list.add(ticket);
-
+                                    // Set values to user object
+                                        ticketID.setText(ticket.getId());
+                                        ticketIDString = ticket.getId();
+                                        destination.setText(ticket.getFrom());
+                                        trainNamee.setText(ticket.getTrain());
+                                        classTrain.setText(ticket.getTrclass());
+                                        dateAndTime.setText(ticket.getDate() + " " + ticket.getTime());
+                                        userid = ticket.getUserId().toString();
+                                        dateAndTimeuser = ticket.getDate() + " " + ticket.getTime();
+                                        fromTrain = ticket.getFrom();
 
                                     FirebaseFirestore.getInstance().collection("users")
                                             .get()
@@ -161,8 +153,7 @@ public class TicketNote extends Fragment {
                 tra.replace(R.id.ticketnoteFagment, fragment);
                 Log.i("TAGPASS", "test pass");
                 tra.commit();
-
-
+                //create checking object
                 Cheking cheking = new Cheking();
                 cheking.setTicketIdcheak(ticketIDString);
                 cheking.setTime(dateAndTimeuser);
@@ -171,6 +162,7 @@ public class TicketNote extends Fragment {
                 cheking.setNote(noteString);
                 Date date = java.util.Calendar.getInstance().getTime();
                 cheking.setDate(date);
+                //create cheking table in Firebase Insert data
                 FirebaseFirestore.getInstance().collection("checking")
                         .document()
                         .set(cheking).addOnSuccessListener(new OnSuccessListener<Void>() {
