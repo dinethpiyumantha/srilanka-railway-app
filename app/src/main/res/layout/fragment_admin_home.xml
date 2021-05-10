@@ -92,8 +92,7 @@
             >
 
             <Button
-
-                android:id="@+id/button7"
+                android:id="@+id/report"
                 android:layout_width="200dp"
                 android:layout_height="160px"
                 android:layout_gravity="center"

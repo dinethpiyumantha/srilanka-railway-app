@@ -24,19 +24,17 @@ public class AdminHome extends Fragment {
     //FirebaseFirestore firebaseFirestore;
     Button button;
     Button btnCheck;
+    Button btnReport;
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
         View v = inflater.inflate(R.layout.fragment_admin_home, container, false);
-
-
         button = v.findViewById(R.id.button5);
         btnCheck = v.findViewById(R.id.btnCheck);
-
+        btnReport = v.findViewById(R.id.report);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,13 +50,25 @@ public class AdminHome extends Fragment {
                CheckedTickets fragment = new CheckedTickets();
                 FragmentTransaction tra = getFragmentManager().beginTransaction();
                 tra.replace(R.id.checking_default, fragment);
-                Log.i("TAGPASS","test pass");
                 tra.commit();
 
             }
         });
+
+        btnReport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Report report = new Report();
+                FragmentTransaction tra = getFragmentManager().beginTransaction();
+                tra.replace(R.id.checking_default, report);
+                tra.commit();
+
+            }
+        });
+
         return v;
 
     }
+
 
 }

@@ -56,24 +56,42 @@ public class CheckedAdapter extends RecyclerView.Adapter<CheckedAdapter.CheckedA
         holder.delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                firebaseFirestore.getInstance().collection("checking").document(chekings.get(position)
-                        .getTicketIdcheak())
-                        .delete()
-                        .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if(task.isSuccessful()){
-                            chekings.remove(chekings.get(position));
-                            notifyDataSetChanged();
-                        }
-                        else{
-
-                        }
-                    }
-                });
+                deleteData(position);
             }
         });
 
+    }
+
+    private void deleteData(int position) {
+        final AlertDialog dialog = new AlertDialog.Builder(mOnTicketListener.getActivity())
+                .setTitle("Delete")
+                .setMessage("Delete Checked Tickets")
+                .setPositiveButton("Delete", null)
+                .setNegativeButton("Cancel", null)
+                .show();
+
+        Button positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
+        positiveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                firebaseFirestore.getInstance().collection("checking").document(chekings.get(position).getDocumentId())
+                        .delete()
+                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if(task.isSuccessful()){
+                                    chekings.remove(chekings.get(position));
+                                    notifyDataSetChanged();
+                                }
+                                else{
+
+                                }
+                            }
+                        });
+                Toast.makeText(mOnTicketListener.getActivity(), "Deleting", Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
+            }
+        });
     }
 
     @Override
