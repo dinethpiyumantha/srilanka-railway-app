@@ -95,20 +95,18 @@ public class MyTicket extends Fragment implements TicketAdapter.OnTicketListener
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 Log.d(TAG, document.getId() + " <<< " + document.getData().getClass() + " >>> => " + document.getData());
-                                Ticket ticket = new Ticket();
-                                {
-                                    ticket.setId(document.getId());
-                                    ticket.setDate(document.getData().get("date").toString());
-                                    ticket.setApprove(document.getData().get("approve").toString());
-                                    ticket.setQty(document.getData().get("qty").toString());
-                                    ticket.setFrom(document.getData().get("from").toString());
-                                    ticket.setTrclass(document.getData().get("trclass").toString());
-                                    ticket.setTo(document.getData().get("to").toString());
-                                    ticket.setTime(document.getData().get("time").toString());
-                                    ticket.setUserId(document.getData().get("userId").toString());
-                                    ticket.setTrain(document.getData().get("train").toString());
-                                    ticket.setPrice(document.getData().get("price").toString());
-                                } //Set values getting from document to a new ticket object
+                                Ticket ticket = new Ticket(); //Set values getting from document to a new ticket object
+                                ticket.setId(document.getId());
+                                ticket.setDate(document.getData().get("date").toString());
+                                ticket.setApprove(document.getData().get("approve").toString());
+                                ticket.setQty(document.getData().get("qty").toString());
+                                ticket.setFrom(document.getData().get("from").toString());
+                                ticket.setTrclass(document.getData().get("trclass").toString());
+                                ticket.setTo(document.getData().get("to").toString());
+                                ticket.setTime(document.getData().get("time").toString());
+                                ticket.setUserId(document.getData().get("userId").toString());
+                                ticket.setTrain(document.getData().get("train").toString());
+                                ticket.setPrice(document.getData().get("price").toString());
 
                                 if(ticket.getApprove().equals("1") && String.valueOf(firebaseUser.getUid()).equals(ticket.getUserId().toString())) {
                                     list.add(ticket);
