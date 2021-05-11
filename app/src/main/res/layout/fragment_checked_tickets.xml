@@ -27,13 +27,15 @@
 
 
         <SearchView
+            android:id="@+id/search_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="1dp"
             android:background="@drawable/search_edit"
             android:drawableLeft="@drawable/ic_baseline_search_24"
             android:paddingHorizontal="10dp"
-            android:paddingVertical="5dp" />
+            android:paddingVertical="5dp"
+            />
 
 <!--        <LinearLayout
             android:layout_width="wrap_content"
@@ -91,7 +93,9 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycleView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:background="@color/cardview_dark_background"
+            />
 
         <Button
             android:id="@+id/login"

@@ -60,9 +60,9 @@ public class Qr_scanner extends AppCompatActivity {
                TicketNote figment = new TicketNote();
                // send data scanner fragment to another fragment
               fragmentManager.beginTransaction().replace(R.id.qrScan,figment).commit();
-                Bundle bundle = new Bundle();
-               bundle.putString("id",resultData);
-               figment.setArguments(bundle);
+              Bundle bundle = new Bundle();
+              bundle.putString("id",resultData);
+              figment.setArguments(bundle);
             }
         });
 

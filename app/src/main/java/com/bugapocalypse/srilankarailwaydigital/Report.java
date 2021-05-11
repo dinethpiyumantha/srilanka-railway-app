@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bugapocalypse.srilankarailwaydigital.data.Cheking;
 import com.bugapocalypse.srilankarailwaydigital.data.Ticket;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -25,11 +26,13 @@ import com.jjoe64.graphview.series.LineGraphSeries;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.util.Date;
 
 @RequiresApi(api = Build.VERSION_CODES.O)
 public class Report extends Fragment {
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     LocalDate myObj = LocalDate.now();
+    int chekingTicket = 0;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -38,7 +41,7 @@ public class Report extends Fragment {
         Log.d("TEST","Line49"+">>"+myObj);
         GraphView graph = (GraphView)v.findViewById(R.id.graph);
         LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[] {
-                new DataPoint(0, 1),
+                new DataPoint(0, chekingTicket),
                 new DataPoint(1, 5),
                 new DataPoint(2, 3),
                 new DataPoint(3, 2),
@@ -53,19 +56,7 @@ public class Report extends Fragment {
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
-                                Ticket ticket = new Ticket();
-                                ticket.setId(document.getId());
-                                Log.d("TEST","Line49");
-                                //Log.d("DATEMY",document.getData().get("date").toString());
-                                //String time = document.getData().get("date").toString();
-                                Timestamp time = (Timestamp) document.getData().get("date");
-                                Log.d("TEST","Line62");
-                                SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-                                //System.out.println(formatter.format(time));
-                                Log.d("TEST","Line65");
-                                String dateMy = formatter.format(time);
-                                Log.d("TEST","Line67");
-                                Log.d("TEST","Line61"+">>"+dateMy);
+                                chekingTicket++;
                             }
                         }
                     }

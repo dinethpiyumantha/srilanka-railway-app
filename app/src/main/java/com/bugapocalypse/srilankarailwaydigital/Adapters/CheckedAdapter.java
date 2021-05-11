@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,13 +25,15 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class CheckedAdapter extends RecyclerView.Adapter<CheckedAdapter.CheckedAdapterHolder> {
+public class CheckedAdapter extends RecyclerView.Adapter<CheckedAdapter.CheckedAdapterHolder> implements Filterable {
     FirebaseFirestore firebaseFirestore;
     FirebaseAuth firebaseAuth;
     public static final String POSITION = "position";
     private Context context;
-    private ArrayList<Cheking> chekings = new ArrayList<Cheking>();
+    private ArrayList<Cheking> chekings ;
+    private ArrayList<Cheking> searchChecking;
     private CheckedTickets mOnTicketListener;
 
     public CheckedAdapter(Context context, ArrayList<Cheking> chekings, CheckedTickets mOnTicketListener) {
@@ -38,6 +42,7 @@ public class CheckedAdapter extends RecyclerView.Adapter<CheckedAdapter.CheckedA
         this.mOnTicketListener = mOnTicketListener;
         firebaseFirestore = FirebaseFirestore.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
+        this.searchChecking = chekings ;
     }
     @NonNull
     @Override
@@ -128,6 +133,41 @@ public class CheckedAdapter extends RecyclerView.Adapter<CheckedAdapter.CheckedA
             }
         });
     }*/
+
+    @Override
+    public Filter getFilter() {
+        return exampleFilter;
+    }
+    private  Filter exampleFilter = new Filter(){
+
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            List<Cheking> chekingList = new ArrayList<>();
+
+            if (constraint == null || constraint.length() == 0){
+                    chekingList.addAll(searchChecking);
+            }else{
+                String filterPattern = constraint.toString().toLowerCase().trim();
+                for (Cheking cheking : searchChecking){
+                    if(cheking.getTrain().toLowerCase().contains(filterPattern)){
+                        chekingList.add(cheking);
+                    }
+
+                }
+            }
+            FilterResults results = new FilterResults();
+            results.values = chekingList;
+            return results;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            chekings.clear();
+            chekings.addAll((List)results.values);
+            notifyDataSetChanged();
+        }
+    };
+
 
     @Override
     public int getItemViewType(int position) {

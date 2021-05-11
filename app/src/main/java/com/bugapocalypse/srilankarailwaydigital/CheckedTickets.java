@@ -9,8 +9,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
 
 
 import com.bugapocalypse.srilankarailwaydigital.Adapters.CheckedAdapter;
@@ -29,6 +33,7 @@ public class CheckedTickets extends Fragment {
     CheckedAdapter chekedAdapter;
     ArrayList<Cheking> list1 = new ArrayList<>();
     RecyclerView recyclerView;
+    //SearchView searchView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -37,6 +42,7 @@ public class CheckedTickets extends Fragment {
         View view = inflater.inflate(R.layout.fragment_checked_tickets, container, false);
         //recycle id
         recyclerView = view.findViewById(R.id.recycleView);
+        //searchView = view.findViewById(R.id.search_list);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         chekedAdapter = new CheckedAdapter(getContext(), list1,this);
@@ -77,5 +83,26 @@ public class CheckedTickets extends Fragment {
 
 
         return view;
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu,MenuInflater inflater) {
+        inflater.inflate(R.menu.bottom_menu,menu);
+        MenuItem serchItem = menu.findItem(R.id.search_list);
+        SearchView searchView = (SearchView) serchItem.getActionView();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                chekedAdapter.getFilter().filter(newText);
+                return false;
+            }
+        });
+
     }
 }

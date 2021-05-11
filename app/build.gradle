@@ -19,7 +19,7 @@ android {
 
     buildTypes {
         release {
-            dataBinding.enabled=true
+            //dataBinding.enabled=true
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -43,8 +43,6 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:19.7.0'
     
     implementation 'com.google.firebase:firebase-firestore:22.1.2'
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
