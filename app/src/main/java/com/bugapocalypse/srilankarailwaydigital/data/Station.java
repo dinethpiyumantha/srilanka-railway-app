@@ -1,25 +1,17 @@
 package com.bugapocalypse.srilankarailwaydigital.data;
 
-public class Train {
+public class Station {
 
-    final static String collection = "Trains";
+    final static String collection = "Stations";
 
     private String id;
     private String name;
 
-    public Train() {
+    public Station() {
     }
 
-    public Train(String id, String name) {
+    public Station(String id, String name) {
         this.id = id;
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
         this.name = name;
     }
 
@@ -29,6 +21,14 @@ public class Train {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public static String getCollection() {

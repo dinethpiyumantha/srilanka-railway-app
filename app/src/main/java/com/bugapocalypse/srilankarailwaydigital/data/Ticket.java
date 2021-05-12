@@ -172,4 +172,8 @@ public class Ticket implements Parcelable {
         dest.writeString(approve);
         dest.writeString(note);
     }
+
+    public static double calculatePrice (int qty, double price) {
+        return qty * price;
+    }
 }

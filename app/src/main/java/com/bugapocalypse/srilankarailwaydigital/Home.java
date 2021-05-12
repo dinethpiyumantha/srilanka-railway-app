@@ -61,7 +61,7 @@ public class Home extends Fragment {
         txtTo = (TextView)view.findViewById(R.id.txtto);
         txtDate = (TextView)view.findViewById(R.id.txtdate);
 
-        Button btnfind = (Button)view.findViewById(R.id.btnfind);
+        Button btnfind = view.findViewById(R.id.btnfind);
 
         hm = new HomeFindbtn();
 
@@ -90,7 +90,7 @@ public class Home extends Fragment {
 //
 
 
-        btnTitle = v.findViewById(R.id.btnTitle);
+        btnTitle = view.findViewById(R.id.btnTitle);
         btnTitle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

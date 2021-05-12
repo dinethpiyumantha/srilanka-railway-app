@@ -52,30 +52,8 @@ public class DigitalTicket extends AppCompatActivity {
         txtDateTime.setText(ticket.getDate() + " " + ticket.getTime());
         txtClass.setText(ticket.getTrclass());
 
-//        =========== Testing Purpose =============
-//        ticket = new Ticket();
-//        ticket.setId("1");
-//        ticket.setUserId("1");
-//        ticket.setFrom("Kurunegala");
-//        ticket.setTo("Colombo");
-//        ticket.setTime("10:35");
-//        ticket.setDate("20/3/2021");
-//        ticket.setTrclass("class 1");
-//        ticket.setTrain("Yal Devi");
-//        ticket.setQty("2");
-//        ==========================================
-
         // Creating String Code
         String codeString = ticket.getId();
-       /* + "," +
-                ticket.getUserId() + "," +
-                ticket.getFrom() + "," +
-                ticket.getTo() + "," +
-                ticket.getTime() + "," +
-                ticket.getDate() + "," +
-                ticket.getTrclass() + "," +
-                ticket.getTrain() + "," +
-                ticket.getQty();*/
 
         // Generate QR Code and Convert it to Bitmap
         MultiFormatWriter writer = new MultiFormatWriter();
