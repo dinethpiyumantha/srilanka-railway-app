@@ -30,16 +30,14 @@ public class Qr_scanner extends AppCompatActivity {
     CodeScannerView codeScannerView;
     String resultData;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {  
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qr_scanner);
-
+        //Get Scanner View
         codeScannerView = findViewById(R.id.scannerView);
         codeScanner = new CodeScanner(this,codeScannerView);
-
+        //scanning and decoding
         codeScanner.setDecodeCallback(new DecodeCallback() {
             @Override
             public void onDecoded(@NonNull Result result) {
@@ -47,8 +45,8 @@ public class Qr_scanner extends AppCompatActivity {
                      @Override
                      public void run() {
                             resultData = result.getText();
+                            //View toast masg in ticket id
                          Toast.makeText(Qr_scanner.this,resultData,Toast.LENGTH_LONG).show();
-
                  }
                  });
             }
@@ -60,15 +58,11 @@ public class Qr_scanner extends AppCompatActivity {
                 codeScannerView.setVisibility(View.GONE);
                FragmentManager fragmentManager=getSupportFragmentManager();
                TicketNote figment = new TicketNote();
-               // FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+               // send data scanner fragment to another fragment
               fragmentManager.beginTransaction().replace(R.id.qrScan,figment).commit();
                 Bundle bundle = new Bundle();
                bundle.putString("id",resultData);
                figment.setArguments(bundle);
-
-                //Intent intent = new Intent(getApplicationContext() , TicketNote.class);
-                //intent.putExtra("Id",resultData);
-                //startActivity(intent);
             }
         });
 

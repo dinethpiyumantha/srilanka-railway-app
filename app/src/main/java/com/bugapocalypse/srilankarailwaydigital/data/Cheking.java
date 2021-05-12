@@ -12,6 +12,15 @@ public class Cheking {
     private String cheacked;
     private String note;
     private String TicketIdcheak;
+    String documentId;
+
+    public String getDocumentId() {
+        return documentId;
+    }
+
+    public void setDocumentId(String documentId) {
+        this.documentId = documentId;
+    }
 
     public String getCheacked() {
         return cheacked;
