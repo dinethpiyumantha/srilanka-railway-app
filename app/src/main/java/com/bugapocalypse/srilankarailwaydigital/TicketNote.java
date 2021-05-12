@@ -5,6 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -147,6 +148,12 @@ public class TicketNote extends Fragment {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //validation
+                String noteValid = note.getText().toString();
+                if (TextUtils.isEmpty(noteValid)) {
+                    note.setError("Note must be add!");
+                    return;
+                }
                 //chang fragment
                 CheckedTickets fragment = new CheckedTickets();
                 FragmentTransaction tra = getFragmentManager().beginTransaction();

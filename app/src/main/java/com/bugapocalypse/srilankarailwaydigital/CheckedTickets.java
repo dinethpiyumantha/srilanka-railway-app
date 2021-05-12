@@ -85,9 +85,9 @@ public class CheckedTickets extends Fragment {
         return view;
     }
 
-    @Override
+   /* @Override
     public void onCreateOptionsMenu(Menu menu,MenuInflater inflater) {
-        inflater.inflate(R.menu.bottom_menu,menu);
+        inflater.inflate(R.menu.searchmenu,menu);
         MenuItem serchItem = menu.findItem(R.id.search_list);
         SearchView searchView = (SearchView) serchItem.getActionView();
 
@@ -104,5 +104,5 @@ public class CheckedTickets extends Fragment {
             }
         });
 
-    }
+    }*/
 }

@@ -52,6 +52,7 @@ public class Qr_scanner extends AppCompatActivity {
             }
 
         });
+
         codeScannerView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

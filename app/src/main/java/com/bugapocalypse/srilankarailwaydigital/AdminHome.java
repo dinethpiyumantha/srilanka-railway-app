@@ -1,9 +1,11 @@
 package com.bugapocalypse.srilankarailwaydigital;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -56,6 +58,7 @@ public class AdminHome extends Fragment {
         });
 
         btnReport.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View v) {
                 Report report = new Report();

@@ -41,13 +41,14 @@ public class Report extends Fragment {
         Log.d("TEST","Line49"+">>"+myObj);
         GraphView graph = (GraphView)v.findViewById(R.id.graph);
         LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[] {
-                new DataPoint(0, chekingTicket),
+                new DataPoint(0, 1),
                 new DataPoint(1, 5),
                 new DataPoint(2, 3),
-                new DataPoint(3, 2),
-                new DataPoint(4, 6)
+                new DataPoint(3, chekingTicket),
+
         });
         graph.addSeries(series);
+
 
         db.collection("checking")
                 .get()
@@ -61,6 +62,19 @@ public class Report extends Fragment {
                         }
                     }
                 });
+
+/*        db.collection("checking")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                chekingTicket++;
+                            }
+                        }
+                    }
+                });*/
 
         return v;
     }
